@@ -41,22 +41,34 @@ public class PlayerController : MonoBehaviour
 
     public ChangeLife changeLife;
 
+    public bool isNotRun = false;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         timeRun = RunTime;
         barRun.maxValue = timeRun;
-        bar.SetActive(false);
+        barRun.value = timeRun;
+        //bar.SetActive(false);
         changeLife.SetMaxHealth(50);
         timePotion = timePotionDuration;
         potionPowerSlider.maxValue = timePotion;
         potionSlider.SetActive(false);
-       
+        isNotRun = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (lifePlayer.currentHealth <= 0)
+        {
+            anim.Play("Death");
+            this.enabled = false;
+            speed = 0;
+        }
+
+
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
         
@@ -112,15 +124,15 @@ public class PlayerController : MonoBehaviour
 
     public void velocityPlayer()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && isNotRun == true)
         {
-            bar.SetActive(true);
+            //bar.SetActive(true);
             timeRun -= Time.deltaTime;
             barRun.value = timeRun;
             if (timeRun <= 0)
             {
                 
-                bar.SetActive(false);
+                //bar.SetActive(false);
                 speed = 3f;
                 timeRun = 0;
 
@@ -132,15 +144,26 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        if (!Input.GetKey(KeyCode.LeftShift))
         {
-            bar.SetActive(false);
+            // bar.SetActive(false);
             speed = 3f;
+
             
-            timeRun = RunTime;
-            
+            if (barRun.value <= RunTime)
+            {
+                isNotRun = false;
+                barRun.value += 0.001f;
+                if(barRun.value == barRun.maxValue)
+                {
+                    timeRun = RunTime;
+                    isNotRun = true;
+                }
+                
+            }
 
         }
+
 
     }
 

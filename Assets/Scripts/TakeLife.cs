@@ -10,7 +10,9 @@ public class TakeLife : MonoBehaviour
     private int random;
     //private Transform player;
     public static int pickObject;
-   
+
+
+    public int lifes;
     
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,7 @@ public class TakeLife : MonoBehaviour
         {
             pickObject += random;
             //player.GetComponent<LifePlayer>().TakeLife(random);
-
+            
             Destroy(this.gameObject);
         }
     }

@@ -8,8 +8,8 @@ public class SaveManager : MonoBehaviour
     public float posX;
     public float posY;
     public Vector2 positionPlayer;
-    public ChangeLife changeLife;
-    
+
+    public ChangeLife change;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,9 +42,8 @@ public class SaveManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("PosicionX", transform.position.x);
         PlayerPrefs.SetFloat("PosicionY", transform.position.y);
-
         
-
+        
         //textSave.SetActive(true);
         //textLoad.SetActive(false);
 

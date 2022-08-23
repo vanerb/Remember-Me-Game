@@ -12,6 +12,7 @@ public class LifePlayer : MonoBehaviour
     public GameObject panelDeath;
     public static bool isDeath;
     public Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +41,10 @@ public class LifePlayer : MonoBehaviour
         anim.Play("Hit");
         if (currentHealth <= 0)
         {
-            panelDeath.SetActive(true);
-            Time.timeScale = 0f;
+            
+
+            
+            Invoke("ActivePane", 0.8f);
             Debug.Log("MUERTO");
             isDeath = true;
         }
@@ -52,6 +55,13 @@ public class LifePlayer : MonoBehaviour
         currentHealth += life;
         Debug.Log("La vida actual es de: " + currentHealth);
         healthBar.SetHealth(currentHealth);
+    }
+
+
+    public void ActivePane()
+    {
+        panelDeath.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 }
