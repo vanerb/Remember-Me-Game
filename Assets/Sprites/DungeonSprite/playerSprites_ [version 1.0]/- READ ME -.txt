@@ -1,0 +1,43 @@
+
+
+                                                         - READ ME -  
+
+
+Thank you for using the playerSprites_...part of the fantasy_ series' of assets on itch.io!
+
+
+Stuff to know - Characters & Weapons
+
+- Each frame is 32x32 pixels
+- Each animation has a right facing [columns 0-3] and left facing [columns 4-7] version
+- Each animation is 4 frames EXCEPT for the roll animation [8 frames]
+- Each weapon has a default sprite, followed by 3 empty frames, followed by its animations
+
+- Character animations [from top to bottom] are: Idle [row 0], run [row 1], jump [row 2], roll [rows 3,4], turn [row 5],
+                                                hit [row 6] and death [row 7]
+
+- Weapon animations [from top to bottom] are: Idle [row 0, column 0], swing right [row 1, sword ONLY],
+                                              bash [row 1, shield   ONLY], swing left [row 2, sword ONLY], 
+                                              hit [row 2, shield ONLY], and stab [row 3, sword ONLY]
+
+Stuff to know - Particle effects
+
+- Each frame is 8x8 pixels
+- Each animation is 6 frames
+
+
+
+Future updates - 
+
+- Upward-facing animations 
+- Updated walk/jump animations
+- Spin animation
+- Updated death animation
+
+If you have any questions or requests you can contact me at analogstudios.inc@gmail.com
+
+
+
+
+
+                                                             
