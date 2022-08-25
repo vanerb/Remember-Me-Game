@@ -39,6 +39,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
         navMeshAgent.speed = randomSpeed;
         randomWearpon = Random.Range(0, wearpon.Length);
         weraponWear.sprite = wearpon[randomWearpon];
+        player = GameObject.FindGameObjectWithTag("Player").gameObject;
     }
 
     // Update is called once per frame
