@@ -6,10 +6,10 @@ public class EnemySpawnRoom : MonoBehaviour
 {
     public bool isInRoom = false;
     public GameObject[] enemys;
-    public Transform xRangeLeft;
-    public Transform xRangeRight;
-    public Transform yRangeUp;
-    public Transform yRangeDown;
+    
+
+    public Transform[] positions;
+    public int posRandom;
     private int enemyRandom;
     public static int numOfEnemy = 0;
     private int numberEnemysLimit = 0;
@@ -40,8 +40,8 @@ public class EnemySpawnRoom : MonoBehaviour
             enemyRandom = Random.Range(0, enemys.Length);
             numberEnemysLimit = Random.Range(1, 5);
             Vector3 spawnPos = new Vector3(0, 0, 0);
-            
-            spawnPos = new Vector3(Random.Range(xRangeLeft.position.x, xRangeRight.position.x), Random.Range(yRangeUp.position.y, yRangeDown.position.y), 0);
+            posRandom = Random.Range(0, positions.Length);
+            spawnPos = new Vector3(positions[posRandom].transform.position.x, positions[posRandom].transform.position.y, 0);
             Instantiate(enemys[enemyRandom], spawnPos, gameObject.transform.rotation);
             numOfEnemyFinal ++;
             //BoxCollider2D.enabled = false;
