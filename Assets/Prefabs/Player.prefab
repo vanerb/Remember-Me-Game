@@ -401,7 +401,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -519,7 +519,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -643,7 +643,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -733,13 +733,14 @@ MonoBehaviour:
   barRun: {fileID: 8931618703776636140}
   bar: {fileID: 8931618703776636050}
   lifePlayer: {fileID: 4533979108411621927}
-  barLife: {fileID: 8931618704555261021}
   lifeInt: 20
   potionPowerSlider: {fileID: 1329965422}
   timePotion: 0
   timePotionDuration: 20
   attackPlayer: {fileID: 4533979108411621928}
   potionSlider: {fileID: 1329965420}
+  changeLife: {fileID: 0}
+  isNotRun: 0
 --- !u!114 &4533979108411621928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +777,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 8931618704860686692}
   panelDeath: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!70 &4533979108411621930
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

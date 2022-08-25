@@ -38,7 +38,7 @@ public class EnemyFollowPLayer : MonoBehaviour
         timeAttack = attackRate;
         randomWearpon = Random.Range(0, wearpon.Length);
         weraponWear.sprite = wearpon[randomWearpon];
-        velocityEnemy = Random.Range(1, 4);
+        velocityEnemy = Random.Range(1, 5);
         speed = velocityEnemy;
         
     }
