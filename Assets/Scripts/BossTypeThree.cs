@@ -52,6 +52,10 @@ public class BossTypeThree : MonoBehaviour
     public Transform yRangeDown;
 
 
+    private float timeVelocity;
+    public float timeVelocityFi;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,6 +71,14 @@ public class BossTypeThree : MonoBehaviour
 
         particleSystem.enableEmission = false;
 
+        timeVelocity = timeVelocityFi;
+
+    }
+
+    public void VelocityNormal()
+    {
+        navMeshAgent.speed = 2.5f;
+        timeVelocity = timeVelocityFi;
     }
 
     // Update is called once per frame
@@ -83,10 +95,12 @@ public class BossTypeThree : MonoBehaviour
         float distance = Vector2.Distance(player.position, transform.position);
         if (distance < range && distance > rangeAttack)
         {
+           
             navMeshAgent.destination = player.transform.position;
             anim.SetBool("isRun", true);
-            timeAttack -= Time.deltaTime;
-            if (timeAttack <= 0)
+            
+            timeVelocity -= Time.deltaTime;
+            if (timeVelocity <= 0)
             {
               
                     /* Vector3 spawnPos = new Vector3(0, 0, 0);
@@ -99,9 +113,9 @@ public class BossTypeThree : MonoBehaviour
                     */
                     navMeshAgent.speed = 5f;
                     rangeAttack = 1.3f;
-                    timeAttack = attackRate;
+                    Invoke("VelocityNormal", 5f);
 
-                
+
 
             }
            
@@ -121,24 +135,20 @@ public class BossTypeThree : MonoBehaviour
                     player.GetComponent<LifePlayer>().TakeDamage(damage);
                     timeAttack = attackRate;
 
-                    rangeAttack = 1.3f;
+                    rangeAttack = 1.5f;
                     navMeshAgent.speed = 2.5f;
 
 
                 }
                 else if (randomAttack == 1)
                 {
-                    /* Vector3 spawnPos = new Vector3(0, 0, 0);
+                    Vector3 spawnPos = new Vector3(0, 0, 0);
 
-                     spawnPos = new Vector3(Random.Range(xRangeLeft.position.x, xRangeRight.position.x), Random.Range(yRangeUp.position.y, yRangeDown.position.y), 0);
+                    spawnPos = new Vector3(Random.Range(xRangeLeft.position.x, xRangeRight.position.x), Random.Range(yRangeUp.position.y, yRangeDown.position.y), 0);
 
-                     GameObject enemy = Instantiate(enemys[Random.Range(0, enemys.Length)], spawnPos, gameObject.transform.rotation);
-                     timeAttack = attackRate;
-                     rangeAttack = 1.3f;
-                    */
-                    navMeshAgent.speed = 5f;
-                    rangeAttack = 1.3f;
+                    GameObject enemy = Instantiate(enemys[Random.Range(0, enemys.Length)], spawnPos, gameObject.transform.rotation);
                     timeAttack = attackRate;
+                    rangeAttack = 1.5f;
 
                 }
                 else if (randomAttack == 2)
@@ -146,7 +156,7 @@ public class BossTypeThree : MonoBehaviour
                     posRandom = Random.Range(0, positions.Length);
                     transform.position = new Vector3(positions[posRandom].transform.position.x, positions[posRandom].transform.position.y, 0);
                     timeAttack = attackRate;
-                    rangeAttack = 1.3f;
+                    rangeAttack = 1.5f;
                     particleSystem.enableEmission = true;
                     navMeshAgent.speed = 2.5f;
                     Invoke("DissableEmission", 0.5f);
