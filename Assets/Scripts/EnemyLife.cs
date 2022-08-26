@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour
 {
 
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
-    public static bool isDeath = false;
+    
     public GameObject[] items;
     private int random;
     public Transform startPoint;
@@ -28,10 +28,10 @@ public class EnemyLife : MonoBehaviour
         {
             anim.Play("Death");
         }
-        if (currentHealth >= 100)
+       /* if (currentHealth >= 100)
         {
             currentHealth = maxHealth;
-        }
+        }*/
     }
 
     public void TakeDamage(int damage)
