@@ -17,17 +17,22 @@ public class PowerPotion : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Function()
+    {
+        isPotionActive = true;
+        if (isActiveAndEnabled == true)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            isPotionActive = true;
-            if(isActiveAndEnabled == true)
-            {
-                Destroy(this.gameObject);
-            }
+            
             
         }
-    }
+    }*/
 
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1321699189056976678}
   - component: {fileID: 1321699189056976679}
-  - component: {fileID: 1321699189056976672}
   - component: {fileID: 1321699189056976673}
+  - component: {fileID: -5746571311000963692}
   m_Layer: 0
   m_Name: PotionPower
   m_TagString: Untagged
@@ -84,18 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1321699189056976672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321699189056976674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9293a509408f7a7409c13ada91dbfa7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1321699189056976673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,3 +110,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
+--- !u!114 &-5746571311000963692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321699189056976674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2510a1d0cf7814899fc4f7021a2d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemButton: {fileID: 134479396814020223, guid: b8359a5d2d533dd4ea48bdbdb7d2b5f6, type: 3}

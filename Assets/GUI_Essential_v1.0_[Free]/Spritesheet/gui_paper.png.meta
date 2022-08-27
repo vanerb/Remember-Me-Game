@@ -203,6 +203,9 @@ TextureImporter:
   - first:
       213: -2226433568376802026
     second: gui_paper_66
+  - first:
+      213: -7248698080703789946
+    second: gui_paper_67
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1730,6 +1733,27 @@ TextureImporter:
       bones: []
       spriteID: 61535e8377e1a11e0800000000000000
       internalID: -2226433568376802026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_67
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 170
+        width: 65
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68448973083776b90800000000000000
+      internalID: -7248698080703789946
       vertices: []
       indices: 
       edges: []

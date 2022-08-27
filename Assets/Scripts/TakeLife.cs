@@ -28,14 +28,19 @@ public class TakeLife : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Function()
+    {
+
+        pickObject += random;
+        //player.GetComponent<LifePlayer>().TakeLife(random);
+
+        Destroy(this.gameObject);
+    }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            pickObject += random;
-            //player.GetComponent<LifePlayer>().TakeLife(random);
-            
-            Destroy(this.gameObject);
         }
-    }
+    }*/
 }
