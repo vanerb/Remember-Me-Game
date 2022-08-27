@@ -625,10 +625,10 @@ TextureImporter:
       name: gui_paper_14
       rect:
         serializedVersion: 2
-        x: 384
-        y: 206
-        width: 182
-        height: 40
+        x: 490
+        y: 234
+        width: 76
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -732,7 +732,7 @@ TextureImporter:
         serializedVersion: 2
         x: 592
         y: 202
-        width: 104
+        width: 65
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1722,7 +1722,7 @@ TextureImporter:
         width: 9
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

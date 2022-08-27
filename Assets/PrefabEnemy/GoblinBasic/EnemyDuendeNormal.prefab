@@ -138,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465273265164627404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.58, y: 1.8, z: 1547.3777}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1465273264529663604}
@@ -236,11 +236,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1465273265335683058}
   - component: {fileID: 1465273265335683060}
-  - component: {fileID: 1465273265335683059}
   - component: {fileID: 1465273265335683061}
   - component: {fileID: 1465273265335683062}
   - component: {fileID: 4313979327332601087}
-  - component: {fileID: 5225070271535235548}
+  - component: {fileID: 2397543004395568958}
+  - component: {fileID: 7152642476556606812}
   m_Layer: 6
   m_Name: EnemyDuende
   m_TagString: Enemy
@@ -256,7 +256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465273265335683057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1547.3777}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1465273264531584435}
@@ -315,36 +315,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1465273265335683059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465273265335683057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89ce63823b021147b1d4156d25ed39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  range: 2.91
-  rangeAttack: 0.78
-  attackRate: 2
-  anim: {fileID: 1465273265335683061}
-  body: {fileID: 1465273265335683062}
-  damage: 0
-  sprite: {fileID: 1465273265335683060}
-  wearpon:
-  - {fileID: 21300000, guid: 7f0bcf51c8f89aa4caf8a56295438f85, type: 3}
-  - {fileID: 21300000, guid: d3b68f7ef72395a4aa677bd300e4c24d, type: 3}
-  - {fileID: 21300000, guid: bf0819db1946b464e830669f89d2ee54, type: 3}
-  - {fileID: 21300000, guid: 22cc189ea6a43524f9df9ccf0f50ea06, type: 3}
-  weraponWear: {fileID: 1465273264531584436}
-  startPoint: {fileID: 1465273265164627405}
-  isExit: 0
-  enemyLife: {fileID: 4313979327332601087}
-  enemy: {fileID: 1465273264529663603}
 --- !u!95 &1465273265335683061
 Animator:
   serializedVersion: 3
@@ -377,7 +347,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02301228, y: -0.2684731}
+  m_Offset: {x: -0.036524624, y: -0.28874162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -388,7 +358,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65622735, y: 0.9630538}
+  m_Size: {x: 0.62920266, y: 0.92251676}
   m_EdgeRadius: 0
 --- !u!114 &4313979327332601087
 MonoBehaviour:
@@ -408,25 +378,54 @@ MonoBehaviour:
   - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
   - {fileID: 1861951258108337612, guid: b5bebd49077302349927f0c880777b60, type: 3}
   startPoint: {fileID: 1465273265335683058}
-  anim: {fileID: 0}
---- !u!50 &5225070271535235548
-Rigidbody2D:
-  serializedVersion: 4
+  anim: {fileID: 1465273265335683061}
+--- !u!114 &2397543004395568958
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465273265335683057}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b1873cca91e85643a3204cfaa029ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 7152642476556606812}
+  player: {fileID: 0}
+  startPoint: {fileID: 1465273265164627404}
+  anim: {fileID: 1465273265335683061}
+  rangeDetect: 4.55
+  rangeAttack: 4.04
+  randomSpeed: 0
+  wearpon:
+  - {fileID: 21300000, guid: 7f0bcf51c8f89aa4caf8a56295438f85, type: 3}
+  - {fileID: 21300000, guid: 22cc189ea6a43524f9df9ccf0f50ea06, type: 3}
+  - {fileID: 21300000, guid: d3b68f7ef72395a4aa677bd300e4c24d, type: 3}
+  weraponWear: {fileID: 1465273264531584436}
+  attackRate: 2
+  enemyLife: {fileID: 4313979327332601087}
+  enemy: {fileID: 1465273264529663603}
+  damage: 0
+--- !u!195 &7152642476556606812
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465273265335683057}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.75
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.5
+  m_BaseOffset: 0.75
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
