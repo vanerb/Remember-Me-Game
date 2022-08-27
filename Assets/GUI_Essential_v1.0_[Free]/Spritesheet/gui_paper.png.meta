@@ -197,6 +197,12 @@ TextureImporter:
   - first:
       213: -5643291590093814327
     second: gui_paper_64
+  - first:
+      213: 7031111331072235756
+    second: gui_paper_65
+  - first:
+      213: -2226433568376802026
+    second: gui_paper_66
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -894,7 +900,7 @@ TextureImporter:
         serializedVersion: 2
         x: 420
         y: 164
-        width: 60
+        width: 24
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -905,27 +911,6 @@ TextureImporter:
       bones: []
       spriteID: 011b40a6a234d0ee0800000000000000
       internalID: -1293303668539084528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gui_paper_28
-      rect:
-        serializedVersion: 2
-        x: 494
-        y: 137
-        width: 163
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d7c725f11125bf60800000000000000
-      internalID: 8049376270005815253
       vertices: []
       indices: 
       edges: []
@@ -1650,7 +1635,7 @@ TextureImporter:
         serializedVersion: 2
         x: 560
         y: 43
-        width: 166
+        width: 64
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1674,7 +1659,7 @@ TextureImporter:
         width: 96
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1682,6 +1667,69 @@ TextureImporter:
       bones: []
       spriteID: 9c54280c2300fa1b0800000000000000
       internalID: -5643291590093814327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_28
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 43
+        width: 76
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7c725f11125bf60800000000000000
+      internalID: 8049376270005815253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_65
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 75
+        width: 64
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8d8c0d086839160800000000000000
+      internalID: 7031111331072235756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gui_paper_66
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 96
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61535e8377e1a11e0800000000000000
+      internalID: -2226433568376802026
       vertices: []
       indices: 
       edges: []

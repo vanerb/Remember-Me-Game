@@ -11,18 +11,24 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
+        //SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
         
+        SceneManager.LoadScene("Room0");
         Time.timeScale = 1f;
         
     }
 
     public void NewGame()
     {
-        random = Random.Range(1, 6);
+        /*random = Random.Range(1, 6);
         numRoom = random;
         PlayerPrefs.SetInt("numRoom", numRoom);
-        SceneManager.LoadScene(random);
+        SceneManager.LoadScene(random);*/
+
+
+        //AÑADIDO PROVISIONAL
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Room0");
     }
 
     public void Exit()
@@ -32,7 +38,7 @@ public class MenuManager : MonoBehaviour
 
     public void Options()
     {
-        //OPCIONES
+        SceneManager.LoadScene("Options");
     }
 
     public void Credits()
