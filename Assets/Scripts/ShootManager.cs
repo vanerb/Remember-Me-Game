@@ -25,19 +25,13 @@ public class ShootManager : MonoBehaviour
 
         if (enemyLife.currentHealth <= 300)
         {
-            fire.bulletAmount = 12;
-            fire.startAngle = 0;
-            fire.endAngle = 270;
-            fire.repeatTime = 3;
-        }
-
-        if (enemyLife.currentHealth <= 100)
-        {
             fire.bulletAmount = 16;
             fire.startAngle = 0;
             fire.endAngle = 360;
             fire.repeatTime = 1;
         }
+
+       
 
     }
 }

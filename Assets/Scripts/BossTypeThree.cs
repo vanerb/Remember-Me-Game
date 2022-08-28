@@ -95,7 +95,7 @@ public class BossTypeThree : MonoBehaviour
         float distance = Vector2.Distance(player.position, transform.position);
         if (distance < range && distance > rangeAttack)
         {
-           
+            timeAttack -= Time.deltaTime;
             navMeshAgent.destination = player.transform.position;
             anim.SetBool("isRun", true);
             

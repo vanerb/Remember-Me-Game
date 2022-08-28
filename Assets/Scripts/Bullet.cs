@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     GameObject tarjet;
     public float speed;
     Rigidbody2D bulletRB;
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<LifePlayer>().TakeDamage(10);
+            collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
     }

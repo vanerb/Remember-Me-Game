@@ -7,6 +7,7 @@ public class BulletDIrections : MonoBehaviour
 
     private Vector2 moveDir;
     public float moveSpeed;
+    public int damage;
 
     private void OnEnable()
     {
@@ -38,5 +39,16 @@ public class BulletDIrections : MonoBehaviour
     private void OnDisable()
     {
         CancelInvoke();
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
+            gameObject.SetActive(false);
+
+        }
     }
 }

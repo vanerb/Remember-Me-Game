@@ -76,6 +76,7 @@ public class BossTypeOne : MonoBehaviour
         {
             navMeshAgent.destination = player.transform.position;
             anim.SetBool("isRun", true);
+            timeAttack -= Time.deltaTime;
         }
         else if (distance <= rangeAttack)
         {

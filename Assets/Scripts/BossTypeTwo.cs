@@ -51,6 +51,8 @@ public class BossTypeTwo : MonoBehaviour
     public Transform yRangeUp;
     public Transform yRangeDown;
 
+    public static int numSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,6 +86,7 @@ public class BossTypeTwo : MonoBehaviour
         {
             navMeshAgent.destination = player.transform.position;
             anim.SetBool("isRun", true);
+            timeAttack -= Time.deltaTime;
         }
         else if (distance <= rangeAttack)
         {
@@ -105,13 +108,19 @@ public class BossTypeTwo : MonoBehaviour
                 }
                 else if (randomAttack == 1)
                 {
-                    Vector3 spawnPos = new Vector3(0, 0, 0);
+                    if (numSpawn < 3)
+                    {
+                        Vector3 spawnPos = new Vector3(0, 0, 0);
 
-                    spawnPos = new Vector3(Random.Range(xRangeLeft.position.x, xRangeRight.position.x), Random.Range(yRangeUp.position.y, yRangeDown.position.y), 0);
+                        spawnPos = new Vector3(Random.Range(xRangeLeft.position.x, xRangeRight.position.x), Random.Range(yRangeUp.position.y, yRangeDown.position.y), 0);
 
-                    GameObject enemy = Instantiate(enemys[Random.Range(0, enemys.Length)], spawnPos, gameObject.transform.rotation);
-                    timeAttack = attackRate;
-                    rangeAttack = 1.3f;
+                        GameObject enemy = Instantiate(enemys[Random.Range(0, enemys.Length)], spawnPos, gameObject.transform.rotation);
+
+                        numSpawn++;
+                        timeAttack = attackRate;
+                        rangeAttack = 1.3f;
+                    }
+                   
 
 
                 }

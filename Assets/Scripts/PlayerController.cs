@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isNotRun = false;
 
+    public ParticleSystem particleSystem;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
         potionPowerSlider.maxValue = timePotion;
         potionSlider.SetActive(false);
         isNotRun = false;
+        particleSystem.enableEmission = false;
         
     }
 
@@ -67,7 +70,6 @@ public class PlayerController : MonoBehaviour
             this.enabled = false;
             speed = 0;
         }
-
 
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
@@ -126,6 +128,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift) && isNotRun == true)
         {
+
             //bar.SetActive(true);
             timeRun -= Time.deltaTime;
             barRun.value = timeRun;
@@ -135,11 +138,19 @@ public class PlayerController : MonoBehaviour
                 //bar.SetActive(false);
                 speed = 3f;
                 timeRun = 0;
-
+                particleSystem.enableEmission = false;
             }
             else
             {
-               
+                particleSystem.enableEmission = true;
+                if (transform.localScale.x == -1)
+                {
+                    particleSystem.transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else
+                {
+                    particleSystem.transform.localScale = new Vector3(1, 1, 1);
+                }
                 speed = 5;
             }
         }
@@ -148,8 +159,8 @@ public class PlayerController : MonoBehaviour
         {
             // bar.SetActive(false);
             speed = 3f;
+            particleSystem.enableEmission = false;
 
-            
             if (barRun.value <= RunTime)
             {
                 isNotRun = false;
@@ -170,7 +181,8 @@ public class PlayerController : MonoBehaviour
 
     public void ChasePlayer()
     {
-        if(horizontalMove > 0)
+        
+        if (horizontalMove > 0)
         {
             anim.SetBool("isRun", true);
             transform.localScale = new Vector3(1, 1, 1);

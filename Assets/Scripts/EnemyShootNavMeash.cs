@@ -14,7 +14,7 @@ public class EnemyShootNavMeash : MonoBehaviour
     public float attackRate = 2;
     public Animator anim;
    
-    public int damage;
+    //public int damage;
     
 
     public Sprite[] wearpon;

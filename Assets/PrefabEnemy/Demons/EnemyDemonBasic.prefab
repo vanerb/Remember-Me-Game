@@ -157,7 +157,7 @@ MonoBehaviour:
   attackRate: 2
   enemyLife: {fileID: 6425032003901599775}
   enemy: {fileID: 1158406339692147423}
-  damage: 0
+  damage: 10
 --- !u!61 &1158406338922540605
 BoxCollider2D:
   m_ObjectHideFlags: 0

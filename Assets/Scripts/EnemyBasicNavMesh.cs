@@ -55,6 +55,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
 
             EnemySpawnRoom.numOfEnemy--;
             EnemySpawnRoom.numOfEnemyFinal--;
+            BossTypeTwo.numSpawn--;
         }
 
         Chase();
