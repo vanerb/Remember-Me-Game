@@ -318,7 +318,9 @@ SpriteAtlas:
   - {fileID: 8930746301723018541, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: -6571662599499155051, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: -7826557370938534350, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
+  - {fileID: -6473865393164878091, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: -3977021819387037201, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
+  - {fileID: 4262575655048196891, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: 1895120545218472934, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: -8434490822446966895, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
   - {fileID: 552274349874645927, guid: 67b190b91d3199b4892cebfd9208e6b3, type: 3}
@@ -830,7 +832,9 @@ SpriteAtlas:
   - dungeonDecoration_0_103
   - dungeonDecoration_0_104
   - dungeonDecoration_0_105
+  - dungeonDecoration_0_111
   - dungeonDecoration_0_106
+  - dungeonDecoration_0_110
   - dungeonDecoration_0_107
   - dungeonDecoration_0_108
   - dungeonDecoration_0_109

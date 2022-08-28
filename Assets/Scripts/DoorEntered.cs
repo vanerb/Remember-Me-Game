@@ -30,7 +30,7 @@ public class DoorEntered : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            doorSprite.sortingOrder = 5;
+            doorSprite.sortingOrder = 8;
         }
     }
 }
