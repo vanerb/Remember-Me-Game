@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour {
 
 	private Queue<string> sentences;
 
+	public int dialogueCount;
+
 	// Use this for initialization
 	void Start () {
 		sentences = new Queue<string>();
@@ -41,7 +43,8 @@ public class DialogueManager : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+		dialogueCount = sentences.Count;
+		if (Input.GetKeyDown(KeyCode.Return))
         {
 			DisplayNextSentence();
         }
