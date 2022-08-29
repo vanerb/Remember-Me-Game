@@ -887,6 +887,12 @@ TextureImporter:
   - first:
       213: 468942099557940468
     second: dungeonDecoration_1 1_3
+  - first:
+      213: -1604888759706109472
+    second: dungeonDecoration_1 1_0
+  - first:
+      213: 8058834490412575566
+    second: dungeonDecoration_1 1_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1025,6 +1031,48 @@ TextureImporter:
       bones: []
       spriteID: 4fc7060ea54028600800000000000000
       internalID: 468942099557940468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeonDecoration_1 1_0
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 165
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e933b51d2a4ab9e0800000000000000
+      internalID: -1604888759706109472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dungeonDecoration_1 1_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 165
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b25b0854bb6df60800000000000000
+      internalID: 8058834490412575566
       vertices: []
       indices: 
       edges: []
