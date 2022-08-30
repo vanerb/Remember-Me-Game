@@ -32,6 +32,7 @@ public class AttackPlayer : MonoBehaviour
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;
+                FindObjectOfType<AudioManager>().Play("56_Attack_03");
             }
         }
         
@@ -48,6 +49,7 @@ public class AttackPlayer : MonoBehaviour
         foreach(Collider2D enemy in hitEnemy)
         {
             enemy.GetComponent<EnemyLife>().TakeDamage(damage);
+            
             Debug.Log("ATACANDO");
         }
     }
