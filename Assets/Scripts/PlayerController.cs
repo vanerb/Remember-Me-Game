@@ -45,6 +45,9 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem particleSystem;
 
+    
+   
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -58,8 +61,14 @@ public class PlayerController : MonoBehaviour
         potionSlider.SetActive(false);
         isNotRun = false;
         particleSystem.enableEmission = false;
+
+        
         
     }
+
+  
+
+    
 
     // Update is called once per frame
     void Update()
@@ -91,7 +100,8 @@ public class PlayerController : MonoBehaviour
 
     public void Potion()
     {
-        if(PowerPotion.isPotionActive == true)
+        
+        if (PowerPotion.isPotionActive == true)
         {
             
             potionSlider.SetActive(true);
@@ -100,6 +110,7 @@ public class PlayerController : MonoBehaviour
             attackPlayer.damage = 40;
             if (timePotion <= 0)
             {
+                
                 PowerPotion.isPotionActive = false;
                 timePotion = 0;
                 potionSlider.SetActive(false);
@@ -110,11 +121,12 @@ public class PlayerController : MonoBehaviour
 
     public void TakeLifePlayer()
     {
-       
-        if(TakeLife.pickObject >= 5)
+        
+        if (TakeLife.pickObject >= 5)
         {
             if(lifePlayer.currentHealth < 100)
             {
+                FindObjectOfType<AudioManager>().Play("Life");
                 lifePlayer.TakeLife(lifeInt);
                 TakeLife.pickObject -= 5;
                 
@@ -184,12 +196,14 @@ public class PlayerController : MonoBehaviour
         
         if (horizontalMove > 0)
         {
+            
             anim.SetBool("isRun", true);
             transform.localScale = new Vector3(1, 1, 1);
             BulletPlayer.isRotated = false;
         }
         else if (horizontalMove < 0)
         {
+            
             anim.SetBool("isRun", true);
             transform.localScale = new Vector3(-1, 1, 1);
             BulletPlayer.isRotated = true;

@@ -26,11 +26,12 @@ public class PauseMenu : MonoBehaviour
         {
             if (isActive)
             {
+                
                 Resume();
             }
             else
             {
-
+                
                 Pause();
             }
 
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
+        FindObjectOfType<AudioManager>().Play("UnPause");
         panelPause.SetActive(false);
         isActive = false;
         Time.timeScale = 1f;
@@ -50,6 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        FindObjectOfType<AudioManager>().Play("Pause");
         panelPause.SetActive(true);
         isActive = true;
         Time.timeScale = 0f;

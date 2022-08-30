@@ -33,7 +33,7 @@ public class TakeLife : MonoBehaviour
 
         pickObject += random;
         //player.GetComponent<LifePlayer>().TakeLife(random);
-
+        FindObjectOfType<AudioManager>().Play("Use");
         Destroy(this.gameObject);
     }
 

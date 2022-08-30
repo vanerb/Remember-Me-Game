@@ -19,6 +19,7 @@ public class PowerPotion : MonoBehaviour
 
     public void Function()
     {
+        FindObjectOfType<AudioManager>().Play("Power");
         isPotionActive = true;
         if (isActiveAndEnabled == true)
         {

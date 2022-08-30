@@ -32,7 +32,7 @@ public class AttackPlayer : MonoBehaviour
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;
-                FindObjectOfType<AudioManager>().Play("56_Attack_03");
+                
             }
         }
         
@@ -42,9 +42,9 @@ public class AttackPlayer : MonoBehaviour
     void Attack()
     {
         anim.SetTrigger("Attack");
+        FindObjectOfType<AudioManager>().Play("Attack");
 
-
-       Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+        Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
         foreach(Collider2D enemy in hitEnemy)
         {

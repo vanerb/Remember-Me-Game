@@ -24,6 +24,7 @@ public class ShootPlayer : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Mouse1) && nextFireTime < Time.time)
         {
+            FindObjectOfType<AudioManager>().Play("Flecha");
             anim.Play("ShootPlayer");
             Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
             nextFireTime = Time.time + attackRate;

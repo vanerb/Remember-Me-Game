@@ -22,7 +22,8 @@ public class LeverOpenDoor : MonoBehaviour
     void Update()
     {
          if(Input.GetKeyDown(KeyCode.C) && isInside == true){
-                anim.enabled = true;
+            FindObjectOfType<AudioManager>().Play("Lever");
+            anim.enabled = true;
                 isActive = true;
                 anim.Play("Active");
             }
