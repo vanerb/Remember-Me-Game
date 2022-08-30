@@ -62,8 +62,8 @@ public class PlayerController : MonoBehaviour
         isNotRun = false;
         particleSystem.enableEmission = false;
 
-        
-        
+        FindObjectOfType<AudioManager>().Play("MainTheme");
+
     }
 
   
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
         {
             if(lifePlayer.currentHealth < 100)
             {
-                FindObjectOfType<AudioManager>().Play("Life");
+                
                 lifePlayer.TakeLife(lifeInt);
                 TakeLife.pickObject -= 5;
                 

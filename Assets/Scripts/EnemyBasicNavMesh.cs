@@ -33,6 +33,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
         randomSpeed = Random.Range(1, 6);
@@ -63,6 +64,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
         float distance = Vector2.Distance(player.transform.position, transform.position);
         if (distance < rangeDetect && distance > rangeAttack)
         {
+
             navMeshAgent.destination = player.transform.position;
 
             anim.SetBool("isRun", true);
@@ -76,7 +78,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
             if (timeAttack <= 0)
             {
                 anim.Play("Attack");
-
+                FindObjectOfType<AudioManager>().Play("EnemyPunch");
                 player.GetComponent<LifePlayer>().TakeDamage(damage);
                 timeAttack = attackRate;
 

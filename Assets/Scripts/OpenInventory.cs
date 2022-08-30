@@ -37,12 +37,16 @@ public class OpenInventory : MonoBehaviour
 
     public void OpenInventori()
     {
+        FindObjectOfType<AudioManager>().Play("Pause");
+
         inventory.SetActive(true);
         isActive = false;
     }
 
     public void CloseInventory()
     {
+        FindObjectOfType<AudioManager>().Play("UnPause");
+
         inventory.SetActive(false);
         isActive = true;
     }

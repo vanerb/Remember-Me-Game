@@ -21,6 +21,7 @@ public class TutorialInfo : MonoBehaviour
     {
         if(isEnter == true)
         {
+            
             info.SetActive(true);
             Time.timeScale = 0;
             
@@ -41,6 +42,7 @@ public class TutorialInfo : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Notification");
             isEnter = true;
             detect.enabled = true;
         }

@@ -88,6 +88,7 @@ public class BossTypeOne : MonoBehaviour
                 randomAttack = Random.Range(0, 3);
                 if (randomAttack == 0)
                 {
+                    FindObjectOfType<AudioManager>().Play("EnemyPunch");
                     anim.Play("Attack");
                     player.GetComponent<LifePlayer>().TakeDamage(damage);
                     timeAttack = attackRate;

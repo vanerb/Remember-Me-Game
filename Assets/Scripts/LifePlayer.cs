@@ -35,15 +35,16 @@ public class LifePlayer : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("PlayerHit");
         currentHealth -= damage;
         Debug.Log("La vida actual es de: " + currentHealth);
         healthBar.SetHealth(currentHealth);
         anim.Play("Hit");
         if (currentHealth <= 0)
         {
-            
+            FindObjectOfType<AudioManager>().Stop("MainTheme");
+            FindObjectOfType<AudioManager>().Play("GameOver");
 
-            
             Invoke("ActivePane", 0.8f);
             Debug.Log("MUERTO");
             isDeath = true;
@@ -52,6 +53,8 @@ public class LifePlayer : MonoBehaviour
 
     public void TakeLife(int life)
     {
+        FindObjectOfType<AudioManager>().Play("Life");
+        
         currentHealth += life;
         Debug.Log("La vida actual es de: " + currentHealth);
         healthBar.SetHealth(currentHealth);

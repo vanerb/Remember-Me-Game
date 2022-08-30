@@ -57,7 +57,7 @@ public class DialogueManager : MonoBehaviour {
 			EndDialogue();
 			return;
 		}
-
+		FindObjectOfType<AudioManager>().Play("Button");
 		string sentence = sentences.Dequeue();
 		StopAllCoroutines();
 		StartCoroutine(TypeSentence(sentence));

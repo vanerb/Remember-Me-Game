@@ -19,6 +19,7 @@ public class DisapearDialogue : MonoBehaviour
         {
             if (FindObjectOfType<DialogueManager>().dialogueCount == 0)
             {
+                FindObjectOfType<AudioManager>().Play("Disapear");
                 Debug.Log("DESAPARECE");
                 particleSystem.enableEmission = true;
                 Invoke("ActivateParticle", 1f);

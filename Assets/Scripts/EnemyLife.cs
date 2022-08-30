@@ -36,6 +36,7 @@ public class EnemyLife : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("EnemyHit");
         currentHealth -= damage;
         Debug.Log("La vida actual enemigo: " + currentHealth);
         anim.SetTrigger("Damage");

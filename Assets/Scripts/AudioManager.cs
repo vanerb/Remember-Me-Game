@@ -48,9 +48,19 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sound, sound => sound.name == name);
+        if (s == null)
+        {
+            return;
+        }
+        s.source.Stop();
+    }
+
     private void Start()
     {
-        Play("MainTheme");
+       
     }
 
 

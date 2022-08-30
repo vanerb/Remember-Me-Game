@@ -27,6 +27,7 @@ public class PickUp : MonoBehaviour
             {
                 if(inventory.isFull[i] == false)
                 {
+                    FindObjectOfType<AudioManager>().Play("PickItem");
                     //ITEM ADDED;
                     inventory.isFull[i] = true;
                     Instantiate(itemButton, inventory.slots[i].transform, false);

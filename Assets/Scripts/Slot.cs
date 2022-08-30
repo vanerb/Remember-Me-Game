@@ -21,8 +21,10 @@ public class Slot : MonoBehaviour
 
     public void DropItem()
     {
-        foreach(Transform child in transform)
+        
+        foreach (Transform child in transform)
         {
+            FindObjectOfType<AudioManager>().Play("DropItem");
             child.GetComponent<Spawn>().SpawnDroppedItem();
             GameObject.Destroy(child.gameObject);
         }

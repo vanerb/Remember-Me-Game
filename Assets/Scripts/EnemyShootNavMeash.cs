@@ -81,7 +81,7 @@ public class EnemyShootNavMeash : MonoBehaviour
             if (timeAttack <= 0)
             {
                 anim.Play("Attack");
-
+                FindObjectOfType<AudioManager>().Play("EnemyShoot");
                 Instantiate(bullet, pointOfShoot.transform.position, Quaternion.identity);
                 timeAttack = attackRate;
 

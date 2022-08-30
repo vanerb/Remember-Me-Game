@@ -20,6 +20,7 @@ public class Information : MonoBehaviour
     {
         if(isEnabled == true)
         {
+            
             info.SetActive(true);
             
 
@@ -35,6 +36,7 @@ public class Information : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("Notification");
             isEnabled = true;
         }
     }

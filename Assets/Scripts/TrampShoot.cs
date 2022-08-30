@@ -26,6 +26,7 @@ public class TrampShoot : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("ShootTramp");
                 anim.Play("Activate");
                 Instantiate(bullet, shootPoint.transform.position, Quaternion.identity);
                 time = timeToShoot;
