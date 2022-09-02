@@ -36,6 +36,7 @@ public class EnemySpawnRoom : MonoBehaviour
         }
         if(isInRoom == true)
         {
+            FindObjectOfType<AudioManager>().Play("Disapear");
             numOfEnemy++;
             enemyRandom = Random.Range(0, enemys.Length);
             numberEnemysLimit = Random.Range(1, 5);

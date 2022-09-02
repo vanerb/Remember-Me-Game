@@ -19,10 +19,11 @@ public class Chest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && isSpawned == false)
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Joystick1Button3) && isSpawned == false)
         {
             if(isIn == true)
             {
+                FindObjectOfType<AudioManager>().Play("Chest");
                 random = Random.Range(0, objects.Length);
                 anim.Play("Active");
                 Instantiate(objects[random], startPoint.transform.position, Quaternion.identity);

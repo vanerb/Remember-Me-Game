@@ -21,7 +21,7 @@ public class OpenDoor : MonoBehaviour
         {
             anim.enabled = true;
             anim.Play("Open");
-            Debug.Log("ESTOY ABIERTO");
+           
            // lever.isActive = false;
             colliderLimit.enabled = false;
         }

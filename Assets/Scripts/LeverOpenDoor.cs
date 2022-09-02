@@ -21,13 +21,22 @@ public class LeverOpenDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if(Input.GetKeyDown(KeyCode.C) && isInside == true){
+         if(Input.GetKeyDown(KeyCode.C) && isInside == true)
+         {
             FindObjectOfType<AudioManager>().Play("Lever");
             anim.enabled = true;
                 isActive = true;
                 anim.Play("Active");
-            }
-            
+         }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3) && isInside == true)
+        {
+            FindObjectOfType<AudioManager>().Play("Lever");
+            anim.enabled = true;
+            isActive = true;
+            anim.Play("Active");
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

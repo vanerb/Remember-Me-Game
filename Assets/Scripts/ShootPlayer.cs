@@ -22,7 +22,7 @@ public class ShootPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1) && nextFireTime < Time.time)
+        if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Joystick1Button5) && nextFireTime < Time.time)
         {
             FindObjectOfType<AudioManager>().Play("Flecha");
             anim.Play("ShootPlayer");

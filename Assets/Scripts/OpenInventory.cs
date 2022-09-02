@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public GameObject inventory;
-    private bool isActive = true;
+    public static bool isActive = true;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class OpenInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Joystick1Button6))
         {
 
             OpenClose();
@@ -28,10 +28,12 @@ public class OpenInventory : MonoBehaviour
         if (isActive)
         {
             OpenInventori();
+            Time.timeScale = 0;
         }
         else
         {
             CloseInventory();
+            Time.timeScale = 1;
         }
     }
 

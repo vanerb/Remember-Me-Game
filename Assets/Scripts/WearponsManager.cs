@@ -23,7 +23,7 @@ public class WearponsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             wearponSelect = 1;
             attackSword.enabled = true;
@@ -32,7 +32,7 @@ public class WearponsManager : MonoBehaviour
             BowGameObject.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             wearponSelect = 2;
             attackSword.enabled = false;

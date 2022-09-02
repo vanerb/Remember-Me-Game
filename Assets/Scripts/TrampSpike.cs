@@ -25,6 +25,7 @@ public class TrampSpike : MonoBehaviour
             time -= Time.deltaTime;
             if (time <= 0)
             {
+                FindObjectOfType<AudioManager>().Play("Spike");
                 anim.Play("Activate");
                 player.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
                 time = timeAttack;

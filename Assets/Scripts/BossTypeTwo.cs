@@ -128,6 +128,7 @@ public class BossTypeTwo : MonoBehaviour
 
                 else if (randomAttack == 2)
                 {
+                    FindObjectOfType<AudioManager>().Play("Disapear");
                     posRandom = Random.Range(0, positions.Length);
                     transform.position = new Vector3(positions[posRandom].transform.position.x, positions[posRandom].transform.position.y, 0);
                     timeAttack = attackRate;

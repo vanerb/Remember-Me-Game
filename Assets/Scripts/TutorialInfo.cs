@@ -28,7 +28,7 @@ public class TutorialInfo : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
             
             isEnter = false;

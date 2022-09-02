@@ -192,6 +192,7 @@ SpriteAtlas:
   - {fileID: 9156211088842969877, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
   - {fileID: 8394180706131398339, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
   - {fileID: 9167485722409597429, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
+  - {fileID: 3694718573590040553, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
   - {fileID: 6220288800943725286, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
   - {fileID: -7603910956561137292, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
   - {fileID: -7476830328261930861, guid: 13ded221c337ab141864adcdd3c4f860, type: 3}
@@ -706,6 +707,7 @@ SpriteAtlas:
   - dungeon__42
   - dungeon__11
   - dungeon__160
+  - dungeon__161
   - dungeon__119
   - dungeon__118
   - dungeon__148

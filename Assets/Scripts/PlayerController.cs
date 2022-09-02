@@ -89,13 +89,17 @@ public class PlayerController : MonoBehaviour
 
         velocityPlayer();
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             TakeLifePlayer();
         }
+        
         changeLife.SetHealth(TakeLife.pickObject);
         
         Potion();
+
+
+        
     }
 
     public void Potion()
@@ -138,54 +142,82 @@ public class PlayerController : MonoBehaviour
 
     public void velocityPlayer()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && isNotRun == true)
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Joystick1Button0))
         {
-
+            isNotRun = true;
             //bar.SetActive(true);
-            timeRun -= Time.deltaTime;
-            barRun.value = timeRun;
+            
             if (timeRun <= 0)
             {
-                
+                isNotRun = false;
                 //bar.SetActive(false);
                 speed = 3f;
                 timeRun = 0;
                 particleSystem.enableEmission = false;
-            }
-            else
-            {
-                particleSystem.enableEmission = true;
-                if (transform.localScale.x == -1)
-                {
-                    particleSystem.transform.localScale = new Vector3(-1, 1, 1);
-                }
-                else
-                {
-                    particleSystem.transform.localScale = new Vector3(1, 1, 1);
-                }
-                speed = 5;
-            }
-        }
-
-        if (!Input.GetKey(KeyCode.LeftShift))
-        {
-            // bar.SetActive(false);
-            speed = 3f;
-            particleSystem.enableEmission = false;
-
-            if (barRun.value <= RunTime)
-            {
-                isNotRun = false;
-                barRun.value += 0.001f;
-                if(barRun.value == barRun.maxValue)
+                barRun.value += 0.01f;
+                if (barRun.value == barRun.maxValue)
                 {
                     timeRun = RunTime;
                     isNotRun = true;
                 }
-                
+            }
+            
+            else
+            {
+                if (isNotRun == true)
+                {
+                    timeRun -= Time.deltaTime;
+                    barRun.value = timeRun;
+                    particleSystem.enableEmission = true;
+                    if (transform.localScale.x == -1)
+                    {
+                        particleSystem.transform.localScale = new Vector3(-1, 1, 1);
+                    }
+                    else
+                    {
+                        particleSystem.transform.localScale = new Vector3(1, 1, 1);
+                    }
+                    speed = 5;
+                }
+
+            }
+        }
+
+        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Joystick1Button0))
+        {
+            isNotRun = false;
+            //bar.SetActive(false);
+            speed = 3f;
+            timeRun = 0;
+            particleSystem.enableEmission = false;
+            barRun.value += 0.01f;
+            if (barRun.value == barRun.maxValue)
+            {
+                timeRun = RunTime;
+                isNotRun = true;
             }
 
         }
+
+        /*  if (!Input.GetKey(KeyCode.LeftShift))
+          {
+              // bar.SetActive(false);
+              speed = 3f;
+              particleSystem.enableEmission = false;
+
+              if (barRun.value <= RunTime)
+              {
+                  //isNotRun = false;
+                  barRun.value += 0.01f;
+                  if(barRun.value == barRun.maxValue)
+                  {
+                      timeRun = RunTime;
+                      //isNotRun = true;
+                  }
+
+              }
+
+          }*/
 
 
     }

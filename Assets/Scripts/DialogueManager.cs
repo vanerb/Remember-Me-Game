@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour {
     private void Update()
     {
 		dialogueCount = sentences.Count;
-		if (Input.GetKeyDown(KeyCode.Return))
+		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
 			DisplayNextSentence();
         }

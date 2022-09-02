@@ -11,7 +11,7 @@ public class TakeLife : MonoBehaviour
     //private Transform player;
     public static int pickObject;
 
-
+    
     public int lifes;
     
     // Start is called before the first frame update
