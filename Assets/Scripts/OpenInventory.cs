@@ -28,12 +28,12 @@ public class OpenInventory : MonoBehaviour
         if (isActive)
         {
             OpenInventori();
-            Time.timeScale = 0;
+            
         }
         else
         {
             CloseInventory();
-            Time.timeScale = 1;
+            
         }
     }
 

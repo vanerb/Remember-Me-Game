@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem particleSystem;
 
-    
+    public Slider sliderChange;
    
 
     void Start()
@@ -89,16 +89,27 @@ public class PlayerController : MonoBehaviour
 
         velocityPlayer();
 
-        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
-        {
-            TakeLifePlayer();
-        }
-        
+       
         changeLife.SetHealth(TakeLife.pickObject);
-        
+
+            
+       if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+       {
+         TakeLifePlayer();
+       }
+
+       
+       if(TakeLife.pickObject > sliderChange.maxValue)
+        {
+            TakeLife.pickObject = 50;
+        }
+
         Potion();
 
-
+        if(OpenInventory.isActive == false)
+        {
+            speed = 0;
+        }
         
     }
 

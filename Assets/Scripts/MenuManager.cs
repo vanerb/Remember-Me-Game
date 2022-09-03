@@ -20,14 +20,15 @@ public class MenuManager : MonoBehaviour
 
     public void NewGame()
     {
-        /*random = Random.Range(1, 6);
-        numRoom = random;
+        //random = Random.Range(1, SceneManager.sceneCountInBuildSettings);
+        //Debug.Log("LA ROOM TOTAL ES DE: " + random);
+        /*numRoom = random;
         PlayerPrefs.SetInt("numRoom", numRoom);
         SceneManager.LoadScene(random);*/
 
 
         //AÑADIDO PROVISIONAL
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
 
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene("Room0");

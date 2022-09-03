@@ -16,8 +16,10 @@ public class ChangeLife : MonoBehaviour
 
     public void SetHealth(float health)
     {
+        
         slider.value = health;
     }
+
 
 
 }
