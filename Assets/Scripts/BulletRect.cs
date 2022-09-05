@@ -26,4 +26,13 @@ public class BulletRect : MonoBehaviour
        
         Destroy(this.gameObject, 2f);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
