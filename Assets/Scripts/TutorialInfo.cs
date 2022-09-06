@@ -23,7 +23,7 @@ public class TutorialInfo : MonoBehaviour
         {
             
             info.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             
 
         }
@@ -32,7 +32,7 @@ public class TutorialInfo : MonoBehaviour
         {
             
             isEnter = false;
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
             info.SetActive(false);
         }
     }
