@@ -44,9 +44,141 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound:
-  - name: 56_Attack_03
-    clip: {fileID: 8300000, guid: 323e15cfe809e114ab92c9f4b25e8bc2, type: 3}
-    volume: 0.461
+  - name: Attack
+    clip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+    volume: 0.554
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Life
+    clip: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+    volume: 0.323
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Power
+    clip: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
+    volume: 0.323
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Use
+    clip: {fileID: 8300000, guid: ba39bf8baf6d13046889b2d64822381a, type: 3}
+    volume: 0.835
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Pause
+    clip: {fileID: 8300000, guid: b83bf8726a7fac349a54389f0c57cda6, type: 3}
+    volume: 0.323
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: UnPause
+    clip: {fileID: 8300000, guid: e58d8bd078f188a4ba314e933b98528b, type: 3}
+    volume: 0.323
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Flecha
+    clip: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+    volume: 0.335
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: MainTheme
+    clip: {fileID: 8300000, guid: da6c331e8ee93aa4bb2065779448cd27, type: 3}
+    volume: 0.335
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Lever
+    clip: {fileID: 8300000, guid: 082f610873114724e8f89f530e2f8448, type: 3}
+    volume: 0.335
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Button
+    clip: {fileID: 8300000, guid: c5cb2ac29e89dbf43a9b644caaad45e6, type: 3}
+    volume: 0.797
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: 35cf7766e9e2aa542811e896fde57989, type: 3}
+    volume: 0.797
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: EnemyHit
+    clip: {fileID: 8300000, guid: eb4c7484c8ba2e349bcbac4fc35c65d5, type: 3}
+    volume: 0.852
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: EnemyPunch
+    clip: {fileID: 8300000, guid: 646965b0e4e45404e993f4d7e8d83d91, type: 3}
+    volume: 0.313
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: PlayerHit
+    clip: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+    volume: 0.731
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: EnemyShoot
+    clip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: GameOver
+    clip: {fileID: 8300000, guid: 92986629da40b5e41b58d2f135422e4f, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: DropItem
+    clip: {fileID: 8300000, guid: 78ad99fd0a0a5144280b07bbdba84815, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: PickItem
+    clip: {fileID: 8300000, guid: 490bfbc72255342408984f60044487de, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Notification
+    clip: {fileID: 8300000, guid: af45e62e5bb39174096085ff4a236a79, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: ShootTramp
+    clip: {fileID: 8300000, guid: c5f46de40e9910d4aa0f772604cfa6f2, type: 3}
+    volume: 0.599
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Disapear
+    clip: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
+    volume: 0.698
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Spike
+    clip: {fileID: 8300000, guid: 88b1cbe3caa3fee4b8b103b5edd7aba9, type: 3}
+    volume: 0.698
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Chest
+    clip: {fileID: 8300000, guid: 7c47b20bb9874304a809dc5580d403ba, type: 3}
+    volume: 0.698
     pitch: 1
     source: {fileID: 0}
     loop: 0

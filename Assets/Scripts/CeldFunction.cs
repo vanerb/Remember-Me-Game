@@ -22,7 +22,7 @@ public class CeldFunction : MonoBehaviour
 		if (menuButtonController.index == thisIndex)
 		{
 			//animator.SetBool("selected", true);
-			if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+			if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.E))
 			{
 				Debug.Log("Boton: " + menuButtonController.index);
 				if(inventory.slots[i].GetComponentInChildren<TakeLife>() == true)
@@ -40,7 +40,7 @@ public class CeldFunction : MonoBehaviour
 				//animator.SetBool("pressed", true);
 			}
 
-            if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+            if (Input.GetKeyDown(KeyCode.Joystick1Button2)|| Input.GetKeyDown(KeyCode.T))
             {
 				Debug.Log("Boton: " + menuButtonController.index);
 				if (inventory.slots[i].GetComponentInChildren<TakeLife>() == true)

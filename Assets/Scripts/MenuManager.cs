@@ -15,7 +15,8 @@ public class MenuManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("Room0");
         Time.timeScale = 1f;
-        
+        //FindObjectOfType<AudioManager>().Play("MainTheme");
+
     }
 
     public void NewGame()
@@ -48,6 +49,8 @@ public class MenuManager : MonoBehaviour
 
     public void Credits()
     {
+        FindObjectOfType<AudioManager>().Play("Button");
+        SceneManager.LoadScene("Credits");   
         //CREDITOS
     }
 

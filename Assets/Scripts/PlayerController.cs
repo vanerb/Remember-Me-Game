@@ -46,6 +46,8 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem particleSystem;
 
     public Slider sliderChange;
+
+    
    
 
     void Start()
@@ -62,7 +64,7 @@ public class PlayerController : MonoBehaviour
         isNotRun = false;
         particleSystem.enableEmission = false;
 
-        FindObjectOfType<AudioManager>().Play("MainTheme");
+        
 
     }
 

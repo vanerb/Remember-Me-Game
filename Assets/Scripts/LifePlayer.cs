@@ -12,6 +12,7 @@ public class LifePlayer : MonoBehaviour
     public GameObject panelDeath;
     public static bool isDeath;
     public Animator anim;
+    public AudioSource mainTheme;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class LifePlayer : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         panelDeath.SetActive(false);
         isDeath = false;
+
     }
 
     // Update is called once per frame
@@ -42,7 +44,7 @@ public class LifePlayer : MonoBehaviour
         anim.Play("Hit");
         if (currentHealth <= 0)
         {
-            FindObjectOfType<AudioManager>().Stop("MainTheme");
+            mainTheme.Stop();
             FindObjectOfType<AudioManager>().Play("GameOver");
 
             Invoke("ActivePane", 0.8f);
