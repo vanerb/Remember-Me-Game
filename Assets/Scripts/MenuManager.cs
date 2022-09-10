@@ -19,6 +19,11 @@ public class MenuManager : MonoBehaviour
 
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
     public void NewGame()
     {
         //random = Random.Range(1, SceneManager.sceneCountInBuildSettings);

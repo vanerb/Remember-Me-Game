@@ -21,6 +21,31 @@ public class Book : MonoBehaviour
         }
     }
 
+    public void Previus()
+    {
+        frases[i].SetActive(false);
+        i--;
+        if (i < 0)
+        {
+            i = 0;
+        }
+        if (i < frases.Length)
+        {
+            frases[i].SetActive(true);
+
+        }
+        else
+        {
+            for (int a = 0; a < frases.Length; a++)
+            {
+                frases[a].SetActive(false);
+
+            }
+            frases[0].SetActive(true);
+            i = 0;
+        }
+    }
+
 
     public void Display()
     {
