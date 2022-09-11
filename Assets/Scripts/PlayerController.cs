@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0;
         }
+
+        if(OpenBook.isBookEnabled == false)
+        {
+            speed = 0;
+        }
         
     }
 

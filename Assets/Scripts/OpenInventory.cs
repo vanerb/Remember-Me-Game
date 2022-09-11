@@ -39,6 +39,7 @@ public class OpenInventory : MonoBehaviour
 
     public void OpenInventori()
     {
+        Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
 
         inventory.SetActive(true);
@@ -47,6 +48,7 @@ public class OpenInventory : MonoBehaviour
 
     public void CloseInventory()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         FindObjectOfType<AudioManager>().Play("UnPause");
 
         inventory.SetActive(false);

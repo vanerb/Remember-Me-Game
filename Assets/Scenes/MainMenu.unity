@@ -543,6 +543,7 @@ GameObject:
   - component: {fileID: 590239459}
   - component: {fileID: 590239458}
   - component: {fileID: 590239461}
+  - component: {fileID: 590239463}
   m_Layer: 5
   m_Name: NewGame
   m_TagString: Untagged
@@ -678,6 +679,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 618006905}
   thisIndex: 1
+--- !u!61 &590239463
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590239456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &618006900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1077,7 @@ GameObject:
   - component: {fileID: 966000271}
   - component: {fileID: 966000270}
   - component: {fileID: 966000269}
+  - component: {fileID: 966000274}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -1137,7 +1165,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 501196504}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: NewGame
+        m_MethodName: Tutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1185,6 +1213,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966000267}
   m_CullTransparentMesh: 1
+--- !u!61 &966000274
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966000267}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1073788558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1854,7 @@ GameObject:
   - component: {fileID: 1460396828}
   - component: {fileID: 1460396827}
   - component: {fileID: 1460396830}
+  - component: {fileID: 1460396832}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -1935,6 +1990,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 618006905}
   thisIndex: 4
+--- !u!61 &1460396832
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460396825}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1462987124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,6 +2558,7 @@ GameObject:
   - component: {fileID: 1861275083}
   - component: {fileID: 1861275082}
   - component: {fileID: 1861275085}
+  - component: {fileID: 1861275087}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -2612,6 +2694,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 618006905}
   thisIndex: 3
+--- !u!61 &1861275087
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861275080}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1958140291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +2814,7 @@ GameObject:
   - component: {fileID: 2019610880}
   - component: {fileID: 2019610879}
   - component: {fileID: 2019610882}
+  - component: {fileID: 2019610884}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2841,6 +2950,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 618006905}
   thisIndex: 3
+--- !u!61 &2019610884
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019610877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2050910207
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class DialogueTrigger : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
@@ -22,6 +23,7 @@ public class DialogueTrigger : MonoBehaviour {
     {
         if (collision.CompareTag("Player"))
         {
+            Cursor.lockState = CursorLockMode.Locked;
             FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }

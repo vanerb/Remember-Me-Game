@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         FindObjectOfType<AudioManager>().Play("UnPause");
         panelPause.SetActive(false);
         isActive = false;
@@ -52,6 +53,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
         panelPause.SetActive(true);
         isActive = true;
