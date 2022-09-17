@@ -9,6 +9,7 @@ public class MenuManager : MonoBehaviour
     private int random;
     private int numRoom;
 
+
     public void Play()
     {
         //SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
@@ -17,12 +18,14 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = 1f;
         //FindObjectOfType<AudioManager>().Play("MainTheme");
         Cursor.lockState = CursorLockMode.Locked;
+       
     }
 
     public void Tutorial()
     {
         Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Tutorial");
+        
     }
 
     public void NewGame()
@@ -32,7 +35,7 @@ public class MenuManager : MonoBehaviour
         /*numRoom = random;
         PlayerPrefs.SetInt("numRoom", numRoom);
         SceneManager.LoadScene(random);*/
-
+       
 
         //AÑADIDO PROVISIONAL
         //FindObjectOfType<AudioManager>().Play("Button");
@@ -46,6 +49,7 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
+        
     }
 
     public void Options()
@@ -53,13 +57,15 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("Options");
+        
     }
 
     public void Credits()
     {
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Button");
-        SceneManager.LoadScene("Credits");   
+        SceneManager.LoadScene("Credits");
+        
         //CREDITOS
     }
 
@@ -68,6 +74,7 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("MainMenu");
+        
         Time.timeScale = 1f;
     }
 

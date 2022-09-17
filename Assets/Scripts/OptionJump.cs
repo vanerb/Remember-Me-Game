@@ -10,18 +10,16 @@ public class OptionJump : MonoBehaviour
 	[SerializeField] bool keyDown;
 	[SerializeField] int maxIndex;
 	//public AudioSource audioSource;
-	public Toggle[] togle;
-	public Slider[] slider;
-	public Dropdown[] dropdowns;
-	public Button[] button;
-
+	
+	public GameObject[] elements;
+	
 	void Start()
 	{
 		//audioSource = GetComponent<AudioSource>();
-		togle[index].Select();
-		slider[index].Select();
-		dropdowns[index].Select();
-		button[index].Select();
+		//togle[index].Select();
+		//slider[index].Select();
+		//dropdowns[index].Select();
+		//button[index].Select();
 	}
 
 	// Update is called once per frame
@@ -29,10 +27,12 @@ public class OptionJump : MonoBehaviour
 	{
 		if (Input.GetAxis("Vertical") != 0)
 		{
-			togle[index].Select();
-			slider[index].Select();
-			dropdowns[index].Select();
-			button[index].Select();
+			//togle[index].Select();
+			//slider[index].Select();
+			//dropdowns[index].Select();
+			//button[index].Select();
+			elements[index].GetComponent<Selectable>().Select();
+		
 			if (!keyDown)
 			{
 				if (Input.GetAxis("Vertical") < 0)
