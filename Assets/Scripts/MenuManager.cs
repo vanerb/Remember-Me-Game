@@ -7,14 +7,13 @@ public class MenuManager : MonoBehaviour
 {
 
     private int random;
-    private int numRoom;
-
+    
 
     public void Play()
     {
-        //SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
+        SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
         FindObjectOfType<AudioManager>().Play("Button");
-        SceneManager.LoadScene("Room0");
+        //SceneManager.LoadScene("Room0");
         Time.timeScale = 1f;
         //FindObjectOfType<AudioManager>().Play("MainTheme");
         Cursor.lockState = CursorLockMode.Locked;
@@ -30,18 +29,17 @@ public class MenuManager : MonoBehaviour
 
     public void NewGame()
     {
-        //random = Random.Range(1, SceneManager.sceneCountInBuildSettings);
-        //Debug.Log("LA ROOM TOTAL ES DE: " + random);
-        /*numRoom = random;
-        PlayerPrefs.SetInt("numRoom", numRoom);
-        SceneManager.LoadScene(random);*/
+        random = Random.Range(4, SceneManager.sceneCountInBuildSettings);
+        Debug.Log("LA ROOM TOTAL ES DE: " + random);
+        PlayerPrefs.SetInt("numRoom", random);
+        SceneManager.LoadScene(random);
        
 
         //AÑADIDO PROVISIONAL
         //FindObjectOfType<AudioManager>().Play("Button");
         Cursor.lockState = CursorLockMode.Locked;
-        PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene("Room0");
+        //PlayerPrefs.DeleteAll();
+       // SceneManager.LoadScene("Room0");
     }
 
     public void Exit()
