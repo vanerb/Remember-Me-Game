@@ -23,6 +23,7 @@ public class ButtonAnim : MonoBehaviour
     public void Enter()
     {
         imgStatic.sprite = imgPressed;
+        FindObjectOfType<AudioManager>().Play("ButtonPress");
     }
 
     public void Exit()

@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt("numRoom"));
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         //SceneManager.LoadScene("Room0");
         Time.timeScale = 1f;
         //FindObjectOfType<AudioManager>().Play("MainTheme");
@@ -45,7 +45,7 @@ public class MenuManager : MonoBehaviour
     public void Exit()
     {
         Cursor.lockState = CursorLockMode.None;
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         Application.Quit();
         
     }
@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviour
     public void Options()
     {
         Cursor.lockState = CursorLockMode.None;
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("Options");
         
     }
@@ -61,7 +61,7 @@ public class MenuManager : MonoBehaviour
     public void Credits()
     {
         Cursor.lockState = CursorLockMode.None;
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("Credits");
         
         //CREDITOS
@@ -70,7 +70,7 @@ public class MenuManager : MonoBehaviour
     public void MainMenu()
     {
         Cursor.lockState = CursorLockMode.None;
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("MainMenu");
         
         Time.timeScale = 1f;
