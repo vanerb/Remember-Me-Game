@@ -117,6 +117,11 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0;
         }
+
+        if(OpenStorageBook.isActive == false)
+        {
+            speed = 0;
+        }
         
     }
 
