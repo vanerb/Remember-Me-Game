@@ -17,10 +17,10 @@ public class OpenBook : MonoBehaviour
     void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Joystick1Button4))
+        /*if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.Joystick1Button4))
         {
             OpenClose();
-        }
+        }*/
     }
 
     public void OpenClose()
@@ -39,6 +39,8 @@ public class OpenBook : MonoBehaviour
 
     public void OpenBookk()
     {
+        FindObjectOfType<OpenStorageBook>().CloseInventory();
+        FindObjectOfType<PauseMenu>().Resume();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
         

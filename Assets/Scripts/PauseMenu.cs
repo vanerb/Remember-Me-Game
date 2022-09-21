@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public bool isActive = false;
     public GameObject panelPause;
+   
 
 
     // Start is called before the first frame update
@@ -42,8 +43,9 @@ public class PauseMenu : MonoBehaviour
        
     }
 
-    void Resume()
+    public void Resume()
     {
+        
         Cursor.lockState = CursorLockMode.Locked;
         FindObjectOfType<AudioManager>().Play("UnPause");
         panelPause.SetActive(false);
@@ -51,8 +53,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    void Pause()
+    public void Pause()
     {
+        FindObjectOfType<BookSheet>().EndDialogue();
+        FindObjectOfType<OpenBook>().CloseBook();
+        FindObjectOfType<OpenStorageBook>().CloseInventory();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
         panelPause.SetActive(true);

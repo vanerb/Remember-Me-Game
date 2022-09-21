@@ -6,6 +6,7 @@ public class OpenStorageBook : MonoBehaviour
 {
     public GameObject bookStorage;
     public static bool isActive = true;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,13 @@ public class OpenStorageBook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button8))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Joystick1Button3))
         {
 
-            OpenClose();
+            CloseInventory();
         }
+
+
     }
 
     public void OpenClose()
@@ -39,6 +42,8 @@ public class OpenStorageBook : MonoBehaviour
 
     public void OpenInventori()
     {
+        FindObjectOfType<OpenBook>().CloseBook();
+        FindObjectOfType<PauseMenu>().Resume();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
 

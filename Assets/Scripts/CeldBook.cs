@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CeldBook : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class CeldBook : MonoBehaviour
 	[SerializeField] int thisIndex;
 	public BookStorage inventory;
 	public int i;
+	public GameObject panel;
+	
 	private void Start()
 	{
 
@@ -24,6 +27,13 @@ public class CeldBook : MonoBehaviour
 			//animator.SetBool("selected", true);
 			if (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.E))
 			{
+				if (inventory.slots[i].GetComponentInChildren<ActiveSheet>() == true)
+				{
+					OpenStorageBook.isActive = true;
+					panel.SetActive(false);
+					inventory.slots[i].GetComponentInChildren<ActiveSheet>().Active();
+				}
+				
 
 
 
