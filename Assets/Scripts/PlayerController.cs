@@ -122,7 +122,12 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0;
         }
-        
+
+        if (ActiveSheet.isActive == true)
+        {
+            speed = 0;
+        }
+
     }
 
     public void Potion()

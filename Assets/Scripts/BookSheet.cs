@@ -73,6 +73,7 @@ public class BookSheet : MonoBehaviour
 
 	public void EndDialogue()
 	{
+		ActiveSheet.isActive = false;
 		panelbook.SetActive(false);
 		//animator.SetBool("IsOpen", false);
 	}
