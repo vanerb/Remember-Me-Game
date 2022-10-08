@@ -59,7 +59,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bbb5e34480fb81b49ab49ccd42dcd954, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81661702b5b1b644d822da34ae65415c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -148,5 +148,15 @@ MonoBehaviour:
   dialogue:
     name: Capitulo 2
     sentences:
-    - aaa
-    - bb
+    - "Diario de 7532 \xA1Chu!\r\n\r\n\xBFSigo a\xFAn? bueno jajaja\u2026 Hoy mi
+      d\xEDa ha sido bastante raro, es la primera vez que alguien me hab\xEDa hablado
+      con tanta confianza\r\n"
+    - "He conocido a un tipo que se llama Markus, hizo cosas malas en el pasado,
+      no me parece educado, es imb\xE9cil, tonto\u2026 Pero decid\xED darle una segunda
+      oportunidad. No entiendo muy bien por qu\xE9 lo hice, pero si el pelea es por
+      arrepentimiento.\r\n"
+    - "En su \xFAltima etapa de vida, \xE9l era mercenario para mantener a su madre,
+      una vez que muri\xF3, \xBFQu\xE9 motivos ten\xEDa para vivir? \xA1\xA1AHH!!
+      que l\xEDo mental me hago, no voy a mentirnos, en parte lo que dije es verdad,
+      lo hizo por su madre, pero la otra parte era porque est\xE1 buen\xEDsimo, es
+      muy guapo, \xA1como el pan! \r\n"

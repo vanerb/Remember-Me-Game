@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4590194944582773044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4590194944582773055}
+  - component: {fileID: 4590194944582773048}
+  - component: {fileID: 4590194944582773049}
+  - component: {fileID: 4590194944582773050}
+  - component: {fileID: 4590194944582773051}
+  m_Layer: 0
+  m_Name: Book 9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4590194944582773055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4590194944582773048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ff27542406f2f80488ceaea008b960c4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4590194944582773049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4590194944582773051}
+        m_TargetAssemblyTypeName: ActiveSheet, Assembly-CSharp
+        m_MethodName: Active
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &4590194944582773050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_CullTransparentMesh: 1
+--- !u!114 &4590194944582773051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f3172097e058c49a7b05b37b4d5b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Capitulo 8
+    sentences:
+    - "Diario de Haniel.\r\n\r\n\r\n\xBFY si realmente estaba enamorado pero no quer\xEDa
+      aceptarlo?\r\n\r\nuhm\u2026 Realmente me sent\xEDa muy mal, no quiero insultar
+      a Astaroth, ahora todo tiene sentido para mi. No le odio, no odio a nadie.
+      \xBFSer\xE1 mi forma de querer? \r\n"
+    - "Pero existen otras formas de amar, no se siente taan mal abrazar a Astaroth.
+      Se acaba de poner de una forma muy linda, parece que est\xE1 disfrutando esto\u2026
+      \xA1Pero no va a entender nada! luego se lo explico jajaja :)\r\n"
+    - "\u201CR-realmente te amo, Astaroth. Pero no me gustan estos momentos tan sentimentales.
+      Mi forma de expresarme no es la mejor y soy un pat\xE1n para decir cosas bonitas,
+      pero no quer\xEDa aceptar que estaba totalmente enamorado \xA1\xA1HASTA EL
+      MISM\xCDSIMO SAT\xC1N QUIERE QUE ESTEMOS JUNTOS, ME HE DADO CUENTA JAJAJA!!\u201D\r\n"
+    - "Y despu\xE9s de decir eso, sin darme cuenta, yo estaba llorando mientras lo
+      abrazaba. No hay motivo del por qu\xE9 me gusta, ni mucho menos que me hizo
+      darme cuenta de que estaba enamorado. Supongo que para el amor no hay respuestas\u2026\r\n"
+    - "JAJAJAJAJAJAJA LO ESTABA ABRAZANDO TAN FUERTE QUE CASI LO APLASTO. En fin,
+      ya me aburr\xED de escribir mi diario. Pero resumiendo, no se como co\xF1o
+      hemos acabado bes\xE1ndonos y lo mejor/peor de todo \xBF\xA1\xA1\xA1C\xD3MO
+      COJONES HAY UNA CAMA AL LADO NUESTRA!!??!, bendito Satan\xE1s. Sea como sea,
+      supongo que haremos de todo menos dormir ;) \r\n"
+    - "\xA1\xA1\xA1\xA1JODER COMO DUELE LA MANO (DE ESCRIBIR) y si no lo he contado
+      bien, a joderse y a dormir, y yo a disfrutar con el novio JAJAJAJA!!!!. Que
+      soy un \xE1ngel, no un otaku.\r\n"

@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4590194944582773044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4590194944582773055}
+  - component: {fileID: 4590194944582773048}
+  - component: {fileID: 4590194944582773049}
+  - component: {fileID: 4590194944582773050}
+  - component: {fileID: 4590194944582773051}
+  m_Layer: 0
+  m_Name: Book 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4590194944582773055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4590194944582773048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 80b98e5949287c5439cafde5138b9d18, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4590194944582773049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4590194944582773051}
+        m_TargetAssemblyTypeName: ActiveSheet, Assembly-CSharp
+        m_MethodName: Active
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &4590194944582773050
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_CullTransparentMesh: 1
+--- !u!114 &4590194944582773051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590194944582773044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f3172097e058c49a7b05b37b4d5b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Capitulo 7
+    sentences:
+    - "\xA1\xA1Diario de Astaroth!! :D\r\n\r\n\r\nSpoiler: no fue mi d\xEDa\r\n\r\n\r\n\xA1\xA1\xA1MIERDAAA,
+      LO TEN\xCDA!!! \xA1realmente estaba muy lindo, incluso m\xE1s rojo que yo!,
+      podr\xEDa decir que sent\xED una leve calidez por todo mi cuerpo\u2026 \xA1Muy
+      muy caliente!, no soporto tanta tensi\xF3n , siento que el pecho me va a estallar
+      pero debo esperar hasta que estemos solos, y si puede ser, con una cama al
+      lado por si ocurren los milagros :) \r\n"
+    - "Parece que la guardiana ten\xEDa prisa, hoy estaba inquieta y mientras no
+      paraba de moverse de un lado hacia otro, dijo algo de un tal \u201CMarkus\u201D
+      y que le hab\xEDa puesto un nombre: \u201CLisa\u201D JAJAJAJA \xA1me pareci\xF3
+      super graciosa! nunca la hab\xEDa visto as\xED, \xA1me gusta mucho su nuevo
+      nombre y es m\xE1s f\xE1cil de decir que \u201C7532\u201D!\r\n"
+    - "En cambio, Haniel, no estaba discutiendo como todos los d\xEDas y ten\xEDa
+      una mirada perdida, casi que dir\xEDa como la de \u201Cun reci\xE9n casado
+      cuando le cortan el rollo en la noche de bodas\u201D. \xA1Para vivir tengo
+      que hacerme ilusiones! un demonio tiene que pensar esas perversiones pero nunca
+      decirselas al chico que le gusta.\r\n"
+    - "\xA1Oh! se me pas\xF3 tan r\xE1pido el d\xEDa\u2026 Me qued\xE9 tan embobado
+      viendo la preciosa cara de mi \xE1ngel que no he podido evitar enamorarme m\xE1s
+      :) pero finalmente\u2026\r\n\r\n\xA1\xA1\xA1\xA1\xA1YA EST\xC1BAMOS LOS DOS
+      SOLOS, YAAAAY!!!! \r\n"
+    - "Parece que \xE9l no sospecha nada, es muy inocente\u2026 \xA1\xA1PERO!! ocurri\xF3
+      una cosa impensable, me ha hablado, sin insultos o sin decir que odia mi existencia:
+      \u201CUhmm\u2026 He estado pensando sobre las cosas desde que Lisa dijo eso\u201D.\r\nDe
+      repente se puso rojo, mientras dec\xEDa \u201Crealmente te odio\u2026 Pero
+      pienso q-que realmente me he portado muy mal contigo, l-lo siento\u201D T_T
+      Esas eran las palabras que m\xE1s quer\xEDa o\xEDr en el mundo, me pregunto
+      qu\xE9 es lo que le ha hecho cambiar de parecer.\r\n"
+    - "De pronto s\xED, empec\xE9 a llorar, un demonio llorando. Haniel debe estar
+      flipando jajaja\u2026\r\n\r\n\xBFuh?\r\n"
+    - "\xBFMe est\xE1 abrazando? \xA1\xA1\xA1ME EST\xC1 ABRAZANDO!!! NO DEBER\xCDA
+      HABERME PUESTO A LLORAR, AHORA LLORO M\xC1S A\xDAN. \r\n\xBF\xA1QU\xC9 CO\xD1O
+      LE EST\xC1 PASANDO!? \xA1NO ENTIENDO NADA! pero se siente bien, deber\xEDa
+      aprovechar el error :)\r\n"

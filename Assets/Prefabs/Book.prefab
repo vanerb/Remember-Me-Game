@@ -59,7 +59,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bbb5e34480fb81b49ab49ccd42dcd954, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf213a0ceae7f974ea563d077b8112be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -148,5 +148,26 @@ MonoBehaviour:
   dialogue:
     name: Capitulo 1
     sentences:
-    - fdsgdsg
-    - gdsgs
+    - "\xA1Diario de 7532! :)\r\n\n\xA1Hola! me presento, soy 7532\u2026 es dif\xEDcil
+      de recordar, \xA1pero los demonios me llamaron as\xED!. No puedo recordar cu\xE1ntos
+      a\xF1os tengo, ser\xE1n unos\u2026 \xBF\xA1400 a\xF1os!? uhmm- \xA1\xA1son
+      muchos!!  no me dan los dedos para contar\u2026\r\n\nHoy he recordado an\xE9cdotas
+      desde que soy la guardiana, \xA1son muy buenas, graciosas y misteriosas JAJAJA!\r\n\n"
+    - "\nLa primera es de un hombre que ten\xEDa pelo rosa y vest\xEDa raro\u2026
+      \xA1No paraba de venir aqu\xED! como muertes infinitas y repitiendo el mismo
+      nombre \u201CGiorno Giovanna\u201D, no hay nadie que haya pasado por aqu\xED
+      en todos estos a\xF1os llamado as\xED pero siempre lo repet\xEDa.\r\n\nLa segunda
+      es m\xE1s buena a\xFAn JAJAJAJA es de un chico que se pensaba que hab\xEDa
+      muerto atropellado salvando a una chica pero se muri\xF3 del susto al ver el
+      tractor, se fue al infierno porque fall\xF3 las pruebas\u2026\r\n"
+    - "A veces me visita un demonio, es muy lindo y majo. Tiene pelo blanco y se
+      llama Lieve y no para de hablar de un ni\xF1o que grita mucho \u201CMADADAAA\u201D
+      o algo as\xED\u2026 Me gustar\xEDa conocerlo alg\xFAn d\xEDa \xA1\xA1PERO NO
+      LO QUIERO MUERTO Y AQU\xCD!!\n\nAqu\xED viene muy seguido un chico calvo, con
+      traje naranja y 6 puntos en la cabeza. por lo visto se est\xE1 muriendo cada
+      vez que pelea, me cont\xF3 que una vez explot\xF3 gritando \u201CGOKUUUU AAAAAAHH\u201D
+      es muy loco JAJAJAJA\r\n"
+    - "Hubo una vez que vinieron tres personas, uno no paraba de gritar \u201CEEEEOOOOO\u201D,
+      otro caminaba raro hacia atr\xE1s y el otro no paraba de llamar a mis demonios
+      con ese s\xEDmbolo que hac\xEDa con las manos, lo llamaban DIO\u2026 \xA1no
+      se que querr\xEDa pero los 3 cantaban muy bien!\r\n"
