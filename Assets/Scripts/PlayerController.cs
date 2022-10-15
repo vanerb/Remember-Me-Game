@@ -139,10 +139,10 @@ public class PlayerController : MonoBehaviour
             potionSlider.SetActive(true);
             potionPowerSlider.value = timePotion;
             timePotion -= Time.deltaTime;
-            attackPlayer.damage = 40;
+            attackPlayer.damage = 50;
             if (timePotion <= 0)
             {
-                
+                attackPlayer.damage = 20;
                 PowerPotion.isPotionActive = false;
                 timePotion = 0;
                 potionSlider.SetActive(false);

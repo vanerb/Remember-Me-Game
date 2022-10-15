@@ -7,6 +7,7 @@ public class BulletRect : MonoBehaviour
     public float speed;
     public Rigidbody2D rb2d;
     public Transform tarjet;
+    public float timeToDestroy = 3f;
     
 
 
@@ -24,13 +25,17 @@ public class BulletRect : MonoBehaviour
         rb2d.velocity = transform.up * -speed;
         
        
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject, timeToDestroy);
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
         }

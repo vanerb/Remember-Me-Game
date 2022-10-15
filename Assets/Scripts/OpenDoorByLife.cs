@@ -8,6 +8,7 @@ public class OpenDoorByLife : MonoBehaviour
     public ActivateDoorDeath active;
     public Animator anim;
     public BoxCollider2D colliderLimit;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class OpenDoorByLife : MonoBehaviour
     {
         if(active.isDeath == true)
         {
+            
             anim.enabled = true;
             anim.Play("Open");
             Debug.Log("ESTOY ABIERTO");

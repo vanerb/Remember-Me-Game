@@ -39,6 +39,7 @@ public class OpenBook : MonoBehaviour
 
     public void OpenBookk()
     {
+        
         FindObjectOfType<OpenStorageBook>().CloseInventory();
         FindObjectOfType<PauseMenu>().Resume();
         Cursor.lockState = CursorLockMode.None;
@@ -51,6 +52,7 @@ public class OpenBook : MonoBehaviour
 
     public void CloseBook()
     {
+        
         Cursor.lockState = CursorLockMode.Locked;
         FindObjectOfType<AudioManager>().Play("UnPause");
 
