@@ -32,5 +32,7 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
             Destroy(this.gameObject);
         }
+
+
     }
 }

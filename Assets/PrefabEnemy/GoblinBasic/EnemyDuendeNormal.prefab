@@ -448,9 +448,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  items:
-  - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
-  - {fileID: 1861951258108337612, guid: b5bebd49077302349927f0c880777b60, type: 3}
   startPoint: {fileID: 1465273265335683058}
   anim: {fileID: 1465273265335683061}
 --- !u!114 &2397543004395568958
@@ -546,7 +543,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.45510662, y: 0.364937}
+  m_Offset: {x: 0.13948548, y: 0.37725312}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -557,5 +554,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24752188, y: 0.076183915}
+  m_Size: {x: 0.87876415, y: 0.29463887}
   m_EdgeRadius: 0

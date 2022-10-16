@@ -46,9 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  items:
-  - {fileID: 1861951258108337612, guid: b5bebd49077302349927f0c880777b60, type: 3}
-  - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
   startPoint: {fileID: 6820922953405436894}
   anim: {fileID: 6820922953405436891}
 --- !u!61 &155151150
@@ -151,7 +148,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4258826, y: 0.7345259}
+  m_Offset: {x: 0.18621594, y: 0.5939522}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -162,7 +159,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4321565, y: 0.17240113}
+  m_Size: {x: 0.91148984, y: 0.45354867}
   m_EdgeRadius: 0
 --- !u!1 &5948968316930681782
 GameObject:
