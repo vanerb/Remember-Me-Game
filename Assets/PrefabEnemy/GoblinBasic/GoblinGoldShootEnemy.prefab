@@ -259,6 +259,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  items:
+  - {fileID: 1861951258108337612, guid: b5bebd49077302349927f0c880777b60, type: 3}
+  - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
   startPoint: {fileID: 745592762088106869}
   anim: {fileID: 745592762088106859}
 --- !u!61 &745592762088106863
