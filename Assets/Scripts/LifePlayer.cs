@@ -65,6 +65,7 @@ public class LifePlayer : MonoBehaviour
 
     public void ActivePane()
     {
+        Cursor.lockState = CursorLockMode.None;
         panelDeath.SetActive(true);
         Time.timeScale = 0f;
     }
