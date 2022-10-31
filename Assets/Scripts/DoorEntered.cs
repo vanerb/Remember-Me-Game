@@ -9,7 +9,7 @@ public class DoorEntered : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        doorSprite.sortingOrder = 8;
+        doorSprite.sortingOrder = -1;
     }
 
     // Update is called once per frame
@@ -17,6 +17,7 @@ public class DoorEntered : MonoBehaviour
     {
         
     }
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,13 +25,15 @@ public class DoorEntered : MonoBehaviour
         {
             doorSprite.sortingOrder = 15;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            doorSprite.sortingOrder = 8;
+            doorSprite.sortingOrder = -1;
         }
+        
     }
 }

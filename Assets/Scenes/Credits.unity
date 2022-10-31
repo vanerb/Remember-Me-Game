@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -487.07266}
+  m_AnchoredPosition: {x: 3, y: -517}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8365103
@@ -215,6 +215,8 @@ GameObject:
   - component: {fileID: 132463328}
   - component: {fileID: 132463327}
   - component: {fileID: 132463326}
+  - component: {fileID: 132463331}
+  - component: {fileID: 132463330}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -278,7 +280,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -350,6 +352,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132463324}
   m_CullTransparentMesh: 1
+--- !u!114 &132463330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132463324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 132463331}
+          m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 132463331}
+          m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 132463331}
+          m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 10
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 132463331}
+          m_TargetAssemblyTypeName: ButtonAnim, Assembly-CSharp
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &132463331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132463324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02426584a7cc07941b4f2933eda98a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgNormal: {fileID: -1521692720083394003, guid: 67294afe08bd24543a7a0f056ff21195, type: 3}
+  imgPressed: {fileID: 788490179828327817, guid: 67294afe08bd24543a7a0f056ff21195, type: 3}
+  imgStatic: {fileID: 132463328}
 --- !u!1 &136836324
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,8 +478,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -399.41266}
-  m_SizeDelta: {x: 322.65, y: 205.32}
+  m_AnchoredPosition: {x: 0.9417, y: -403.356}
+  m_SizeDelta: {x: 278.9594, y: 145.1073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136836326
 MonoBehaviour:
@@ -407,7 +501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: af64cc768236d0e4ab34360de5915f8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78087c3d246f5c949a42336e1084aa30, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1813,8 +1907,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Creadora: \nVanesa Ribera\n\nHistoria:\nPaula Ribera\nVanesa Ribera\n\nDise\xF1o
-    niveles:\nVanesa Ribera\n\nGUI:\nCrusenho\n\nFX:\nnyk_nck \n\nSonido/Musica:\nleohpaz\n\n\n\n\n\n\xA1Muchas
+  m_Text: "Creadora: \nVanesa Ribera\n\nHistoria:\nPaula Ribera\n\nDise\xF1o niveles:\nVanesa
+    Ribera\n\nGUI:\nCrusenho\n\nFX:\nnyk_nck \n\nSonido/M\xFAsica:\nleohpaz\n\n\n\n\n\n\xA1Muchas
     gracias por jugar!\nS\xEDguenos en nuestras redes sociales\n"
 --- !u!222 &1087584365
 CanvasRenderer:
@@ -1967,7 +2061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038147, y: -309.07266}
+  m_AnchoredPosition: {x: 0.000038147, y: -274}
   m_SizeDelta: {x: 322.6527, y: 60.4974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229055487

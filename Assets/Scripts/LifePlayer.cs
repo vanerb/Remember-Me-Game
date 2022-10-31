@@ -46,7 +46,7 @@ public class LifePlayer : MonoBehaviour
         {
             mainTheme.Stop();
             FindObjectOfType<AudioManager>().Play("GameOver");
-
+            
             Invoke("ActivePane", 0.8f);
             Debug.Log("MUERTO");
             isDeath = true;

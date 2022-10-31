@@ -30,6 +30,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
     public GameObject enemy;
     public int damage;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,16 @@ public class EnemyBasicNavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PotionInvisibility.isInvisibilityActive)
+        {
+            rangeDetect = 0f;
+            rangeAttack = 0f;
+        }
+        else
+        {
+            rangeDetect = 6f;
+            rangeAttack = 0.8f;
+        }
 
         if (enemyLife.currentHealth <= 0)
         {
@@ -79,7 +90,11 @@ public class EnemyBasicNavMesh : MonoBehaviour
             {
                 anim.Play("Attack");
                 FindObjectOfType<AudioManager>().Play("EnemyPunch");
-                player.GetComponent<LifePlayer>().TakeDamage(damage);
+                if (!PlayerController.isShieldActive)
+                {
+                    player.GetComponent<LifePlayer>().TakeDamage(damage);
+                }
+                
                 timeAttack = attackRate;
 
             }

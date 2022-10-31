@@ -47,6 +47,15 @@ public class PlayerController : MonoBehaviour
 
     public Slider sliderChange;
 
+
+    //SHIELD
+    public static bool isShieldActive = false;
+    private float timeShield;
+    public float durationShield;
+    public GameObject shield;
+
+
+   
     
    
 
@@ -64,17 +73,31 @@ public class PlayerController : MonoBehaviour
         isNotRun = false;
         particleSystem.enableEmission = false;
 
-        
 
+
+        shield.SetActive(false);
+        timeShield = durationShield;
+        
     }
 
-  
+
+
+    private void FixedUpdate()
+    {
+        
+    }
 
     
+
+
 
     // Update is called once per frame
     void Update()
     {
+
+       
+
+
         if (lifePlayer.currentHealth <= 0)
         {
             anim.Play("Death");
@@ -93,6 +116,25 @@ public class PlayerController : MonoBehaviour
 
        
         changeLife.SetHealth(TakeLife.pickObject);
+
+
+
+
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Joystick1Button4))
+        {
+            ActiveShield();
+        }
+        if(isShieldActive== true)
+        {
+            timeShield -= Time.deltaTime;
+            if (timeShield <= 0)
+            {
+                shield.SetActive(false);
+                isShieldActive = false;
+                Invoke("RestoreTimeShield", 5f);
+            }
+        }
+       
 
             
        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
@@ -149,6 +191,20 @@ public class PlayerController : MonoBehaviour
                 timePotion = timePotionDuration;
             }
         }
+    }
+
+    
+
+    public void ActiveShield()
+    {
+        shield.SetActive(true);
+        isShieldActive = true;
+        
+    }
+
+    public void RestoreTimeShield()
+    {
+        timeShield = durationShield;
     }
 
     public void TakeLifePlayer()

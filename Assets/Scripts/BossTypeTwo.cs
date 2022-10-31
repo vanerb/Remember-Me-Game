@@ -81,6 +81,17 @@ public class BossTypeTwo : MonoBehaviour
 
         }
 
+        if (PotionInvisibility.isInvisibilityActive)
+        {
+            range = 0f;
+            rangeAttack = 0f;
+        }
+        else
+        {
+            range = 5.5f;
+            rangeAttack = 1f;
+        }
+
         float distance = Vector2.Distance(player.position, transform.position);
         if (distance < range && distance > rangeAttack)
         {
@@ -100,7 +111,11 @@ public class BossTypeTwo : MonoBehaviour
                 {
                     FindObjectOfType<AudioManager>().Play("EnemyPunch");
                     anim.Play("Attack");
-                    player.GetComponent<LifePlayer>().TakeDamage(damage);
+                    if (!PlayerController.isShieldActive)
+                    {
+                        player.GetComponent<LifePlayer>().TakeDamage(damage);
+                    }
+                    
                     timeAttack = attackRate;
                     
                     rangeAttack = 1.3f;

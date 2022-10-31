@@ -308,6 +308,7 @@ MonoBehaviour:
   - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
   startPoint: {fileID: 8745928330777711173}
   anim: {fileID: 8745928330777711227}
+  points: {fileID: 0}
 --- !u!61 &8745928330777711225
 BoxCollider2D:
   m_ObjectHideFlags: 0

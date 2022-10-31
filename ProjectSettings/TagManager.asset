@@ -12,6 +12,7 @@ TagManager:
   - Exit
   - PointOfShoot
   - ColArm
+  - Door
   layers:
   - Default
   - TransparentFX

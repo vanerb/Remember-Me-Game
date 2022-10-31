@@ -22,7 +22,11 @@ public class DamagePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.GetComponent<LifePlayer>().TakeDamage(damage);
+            if (!PlayerController.isShieldActive)
+            {
+                player.GetComponent<LifePlayer>().TakeDamage(damage);
+            }
+            
             Debug.Log("HERDO");
         }
     }

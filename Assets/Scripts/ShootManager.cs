@@ -15,7 +15,7 @@ public class ShootManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(enemyLife.currentHealth <= 500)
+        if(enemyLife.currentHealth <= 700)
         {
             fire.bulletAmount = 8;
             fire.startAngle = 0;
@@ -23,7 +23,7 @@ public class ShootManager : MonoBehaviour
             fire.repeatTime = 5;
         }
 
-        if (enemyLife.currentHealth <= 300)
+        if (enemyLife.currentHealth <= 500)
         {
             fire.bulletAmount = 16;
             fire.startAngle = 0;

@@ -29,7 +29,11 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
+            if (!PlayerController.isShieldActive)
+            {
+                collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
+
+            }
             Destroy(this.gameObject);
         }
 

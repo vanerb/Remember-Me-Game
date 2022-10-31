@@ -8,6 +8,7 @@ public class ModifyLayer : MonoBehaviour
     public SpriteRenderer sword;
     public SpriteRenderer hand;
     public SpriteRenderer bow;
+    public SpriteRenderer shield;
     public int layerInt;
     public static bool isDeleted = false;
     
@@ -26,6 +27,7 @@ public class ModifyLayer : MonoBehaviour
             sword.sortingOrder = 10;
             hand.sortingOrder = 11;
             bow.sortingOrder = 10;
+            shield.sortingOrder = 13;
         }
     }
 
@@ -37,10 +39,11 @@ public class ModifyLayer : MonoBehaviour
     {
         if (collision.CompareTag("ColArm"))
         {
-            objectToModify.sortingOrder = layerInt;
-            sword.sortingOrder = layerInt;
-            hand.sortingOrder = layerInt;
-            bow.sortingOrder = layerInt;
+            objectToModify.sortingOrder = 2;
+            sword.sortingOrder = 0;
+            hand.sortingOrder = 1;
+            bow.sortingOrder = 0;
+            shield.sortingOrder = 3;
             isDeleted = false;
             
         }
@@ -57,6 +60,7 @@ public class ModifyLayer : MonoBehaviour
             sword.sortingOrder = 10;
             hand.sortingOrder = 11;
             bow.sortingOrder = 10;
+            shield.sortingOrder = 13;
         }
 
     }

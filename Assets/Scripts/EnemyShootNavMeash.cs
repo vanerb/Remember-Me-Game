@@ -56,6 +56,18 @@ public class EnemyShootNavMeash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PotionInvisibility.isInvisibilityActive)
+        {
+            range = 0f;
+            rangeAttack = 0f;
+        }
+        else
+        {
+            range = 6f;
+            rangeAttack = 2.5f;
+        }
+
+
         if (enemyLife.currentHealth <= 0)
         {
             this.enabled = false;

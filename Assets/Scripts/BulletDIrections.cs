@@ -46,7 +46,11 @@ public class BulletDIrections : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
+            if (!PlayerController.isShieldActive)
+            {
+                collision.gameObject.GetComponent<LifePlayer>().TakeDamage(damage);
+            }
+            
             gameObject.SetActive(false);
 
         }
