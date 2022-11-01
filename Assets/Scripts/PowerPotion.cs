@@ -19,12 +19,17 @@ public class PowerPotion : MonoBehaviour
 
     public void Function()
     {
-        FindObjectOfType<AudioManager>().Play("Power");
-        isPotionActive = true;
-        if (isActiveAndEnabled == true)
+        if(!PotionInvisibility.isInvisibilityActive && !PotionPoison.isPoisonActive)
         {
-            Destroy(this.gameObject);
+            FindObjectOfType<AudioManager>().Play("Power");
+            isPotionActive = true;
+            if (isActiveAndEnabled == true)
+            {
+                Destroy(this.gameObject);
+            }
         }
+
+        
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)

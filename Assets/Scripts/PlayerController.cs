@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
             {
                 shield.SetActive(false);
                 isShieldActive = false;
-                Invoke("RestoreTimeShield", 5f);
+                Invoke("RestoreTimeShield", 3.7f);
             }
         }
        

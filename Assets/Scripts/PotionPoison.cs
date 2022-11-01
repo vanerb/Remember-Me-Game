@@ -28,11 +28,15 @@ public class PotionPoison : MonoBehaviour
 
     public void Function()
     {
-        FindObjectOfType<AudioManager>().Play("Power");
-        isPoisonActive = true;
-        if (isActiveAndEnabled == true)
+        if(!PowerPotion.isPotionActive && !PotionInvisibility.isInvisibilityActive)
         {
-            Destroy(this.gameObject);
+            FindObjectOfType<AudioManager>().Play("Power");
+            isPoisonActive = true;
+            if (isActiveAndEnabled == true)
+            {
+                Destroy(this.gameObject);
+            }
         }
+        
     }
 }

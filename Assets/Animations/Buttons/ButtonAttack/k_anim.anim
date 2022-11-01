@@ -41,17 +41,6 @@ AnimationClip:
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   - curve:
-    - time: 0.083333336
-      value: {fileID: 2576002672844809, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
-    - time: 0.26666668
-      value: {fileID: -1792549241562093404, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
-    - time: 0.41666666
-      value: {fileID: -3773305587619577535, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
-    attribute: m_Sprite
-    path: ControlesMando/ButtonKeyDer
-    classID: 114
-    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  - curve:
     - time: 0
       value: {fileID: 6749254008004129466, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     - time: 0.13333334
@@ -62,6 +51,19 @@ AnimationClip:
       value: {fileID: 9109898363745289567, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     attribute: m_Sprite
     path: ControlesMando/ButtonKeyIzq
+    classID: 114
+    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  - curve:
+    - time: 0
+      value: {fileID: 8028160106534714691, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - time: 0.18333334
+      value: {fileID: -4805342491337141656, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - time: 0.38333333
+      value: {fileID: -6922794103258563634, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - time: 0.53333336
+      value: {fileID: 1181533216655332972, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    attribute: m_Sprite
+    path: ControlesMando/ButtonKeyDer
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_SampleRate: 60
@@ -86,14 +88,14 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 3017895569
+      path: 4016743142
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 4016743142
+      path: 3017895569
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
@@ -106,19 +108,20 @@ AnimationClip:
     - {fileID: -965788761426289408, guid: 87682dfd46bba0d49907be1f68e28d18, type: 3}
     - {fileID: -7547081347088392711, guid: 87682dfd46bba0d49907be1f68e28d18, type: 3}
     - {fileID: -7547081347088392711, guid: 87682dfd46bba0d49907be1f68e28d18, type: 3}
-    - {fileID: 2576002672844809, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
-    - {fileID: -1792549241562093404, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
-    - {fileID: -3773305587619577535, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     - {fileID: 6749254008004129466, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     - {fileID: -2127122475620270424, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     - {fileID: 6736301499343761611, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
     - {fileID: 9109898363745289567, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - {fileID: 8028160106534714691, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - {fileID: -4805342491337141656, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - {fileID: -6922794103258563634, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
+    - {fileID: 1181533216655332972, guid: b39d753f6e0dd0f45a0c9ef1b630760d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.43333334
+    m_StopTime: 0.55
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

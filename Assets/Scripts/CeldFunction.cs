@@ -35,7 +35,19 @@ public class CeldFunction : MonoBehaviour
 					Debug.Log("ES UNA POCION DE PODER");
 					inventory.slots[i].GetComponentInChildren<PowerPotion>().Function();
 				}
-				
+
+				if (inventory.slots[i].GetComponentInChildren<PotionInvisibility>() == true)
+				{
+					Debug.Log("ES UNA POCION DE PODER");
+					inventory.slots[i].GetComponentInChildren<PotionInvisibility>().Function();
+				}
+
+				if (inventory.slots[i].GetComponentInChildren<PotionPoison>() == true)
+				{
+					Debug.Log("ES UNA POCION DE PODER");
+					inventory.slots[i].GetComponentInChildren<PotionPoison>().Function();
+				}
+
 				//buttonSprite.GetComponent<Image>().color = new Color32(255, 255, 225, 100);
 				//animator.SetBool("pressed", true);
 			}
@@ -51,6 +63,16 @@ public class CeldFunction : MonoBehaviour
 				if (inventory.slots[i].GetComponentInChildren<PowerPotion>() == true)
 				{
 					Debug.Log("ES UNA POCION DE PODER");
+					inventory.slots[i].GetComponentInChildren<Slot>().DropItem();
+				}
+
+				if (inventory.slots[i].GetComponentInChildren<PotionInvisibility>() == true)
+				{
+					inventory.slots[i].GetComponentInChildren<Slot>().DropItem();
+				}
+
+				if (inventory.slots[i].GetComponentInChildren<PotionPoison>() == true)
+				{
 					inventory.slots[i].GetComponentInChildren<Slot>().DropItem();
 				}
 			}

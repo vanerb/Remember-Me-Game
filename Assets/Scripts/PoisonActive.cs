@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PoisonActive : MonoBehaviour
 {
@@ -16,28 +17,49 @@ public class PoisonActive : MonoBehaviour
     public int damage;
     public GameObject ilum;
 
+    //AÑADIDO BARRA VISUAL
+
+    public Slider sliderPoison;
+    public GameObject poisonSlider;
+    public float timePoison;
+    public float time;
 
     // Start is called before the first frame update
     void Start()
     {
         ilum.SetActive(false);
+        poisonSlider.SetActive(false);
+        sliderPoison.maxValue = 10f;
+       
+        time = timePoison;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Poison();
+        
+        
     }
-
     public void Poison()
     {
-        
+        sliderPoison.value = time;
         if (PotionPoison.isPoisonActive == true)
         {
+            poisonSlider.SetActive(true);
+            time -= Time.deltaTime;
+            if (time <= 0)
+            {
+                time = timePoison;
+                DisablePoison();
+
+            }
+
+
             if (Time.time >= nextAttack) { 
                 Attack();
                 ilum.SetActive(true);
-                Invoke("DisablePoison", 10f);
                 nextAttack = Time.time + 1f / attackRate;
             }
         }
@@ -45,6 +67,7 @@ public class PoisonActive : MonoBehaviour
 
     public void DisablePoison()
     {
+        poisonSlider.SetActive(false);
         ilum.SetActive(false);
         PotionPoison.isPoisonActive = false;
     }

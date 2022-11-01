@@ -30,7 +30,7 @@ public class EnemyLife : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            points.SumarPuntos(5);
+            points.SumarPuntos(Random.Range(0, 10));
             ModifyLayer.isDeleted = true;
             anim.Play("Death");
         }

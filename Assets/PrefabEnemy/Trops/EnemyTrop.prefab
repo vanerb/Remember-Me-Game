@@ -291,8 +291,11 @@ MonoBehaviour:
   items:
   - {fileID: 1861951258108337612, guid: b5bebd49077302349927f0c880777b60, type: 3}
   - {fileID: 1321699189056976674, guid: b23f681203d5307438e7e46f0210c530, type: 3}
+  - {fileID: 5466140835364352495, guid: 1d68abfee7affe04c88dafb02941b6e9, type: 3}
+  - {fileID: 8187804710640522814, guid: 8718a322b81bc0346ac9034d912447eb, type: 3}
   startPoint: {fileID: 4381266031795771389}
   anim: {fileID: 4381266031795771388}
+  points: {fileID: 0}
 --- !u!61 &868919827462746700
 BoxCollider2D:
   m_ObjectHideFlags: 0
