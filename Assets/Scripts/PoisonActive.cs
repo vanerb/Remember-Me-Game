@@ -75,7 +75,7 @@ public class PoisonActive : MonoBehaviour
     void Attack()
     {
        //anim.SetTrigger("Attack");
-        FindObjectOfType<AudioManager>().Play("Attack");
+        FindObjectOfType<AudioManager>().Play("EnemyHit");
 
         Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
