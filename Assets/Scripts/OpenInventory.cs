@@ -16,6 +16,7 @@ public class OpenInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Joystick1Button6))
         {
 
@@ -27,7 +28,11 @@ public class OpenInventory : MonoBehaviour
     {
         if (isActive)
         {
-            OpenInventori();
+            if(!ActiveShop.isShopEnabled && !LifePlayer.isDeath && !PauseMenu.isActive)
+            {
+                OpenInventori();
+            }
+            
             
         }
         else

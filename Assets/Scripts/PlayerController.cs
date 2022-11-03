@@ -169,6 +169,7 @@ public class PlayerController : MonoBehaviour
         {
             speed = 0;
         }
+        
 
     }
 

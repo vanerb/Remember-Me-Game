@@ -13,6 +13,8 @@ public class LifePlayer : MonoBehaviour
     public static bool isDeath;
     public Animator anim;
     public AudioSource mainTheme;
+    public int muertesTotal;
+    public GameObject[] lifes;
     
     // Start is called before the first frame update
     void Start()
@@ -44,10 +46,25 @@ public class LifePlayer : MonoBehaviour
         anim.Play("Hit");
         if (currentHealth <= 0)
         {
-            mainTheme.Stop();
-            FindObjectOfType<AudioManager>().Play("GameOver");
+            currentHealth = maxHealth;
+            muertesTotal++;
+            if(muertesTotal == 1)
+            {
+                lifes[2].SetActive(false);
+            }
+            else if(muertesTotal == 2)
+            {
+                lifes[1].SetActive(false);
+            }
+            else if(muertesTotal >= 3)
+            {
+                mainTheme.Stop();
+                FindObjectOfType<AudioManager>().Play("GameOver");
+                lifes[0].SetActive(false);
+                Invoke("ActivePane", 0.5f);
+            }
             
-            Invoke("ActivePane", 0.8f);
+
             Debug.Log("MUERTO");
             isDeath = true;
         }
@@ -65,6 +82,9 @@ public class LifePlayer : MonoBehaviour
 
     public void ActivePane()
     {
+        FindObjectOfType<OpenInventory>().CloseInventory();
+        FindObjectOfType<ActiveShop>().DisableShop();
+        FindObjectOfType<PauseMenu>().Resume();
         Cursor.lockState = CursorLockMode.None;
         panelDeath.SetActive(true);
         Time.timeScale = 0f;

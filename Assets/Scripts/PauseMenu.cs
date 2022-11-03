@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool isActive = false;
+    public static bool isActive = false;
     public GameObject panelPause;
     public AudioSource menuMusic;
 
@@ -59,6 +59,7 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<BookSheet>().EndDialogue();
         FindObjectOfType<OpenBook>().CloseBook();
         FindObjectOfType<OpenStorageBook>().CloseInventory();
+        FindObjectOfType<ActiveShop>().DisableShop();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
         

@@ -13,6 +13,7 @@ TagManager:
   - PointOfShoot
   - ColArm
   - Door
+  - Event
   layers:
   - Default
   - TransparentFX
