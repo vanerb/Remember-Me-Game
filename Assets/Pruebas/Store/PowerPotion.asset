@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d64bf5288ecc04bb3c36ef1a29da2f, type: 3}
   m_Name: PowerPotion
   m_EditorClassIdentifier: 
-  title: Pocion Poder
+  title: Didoxain
   description: Te otorga el doble de fuerza pero solo con la espada
   baseCost: 20

@@ -40,6 +40,7 @@ public class ShopManagerScript : MonoBehaviour
 
     public void LoadPanels()
     {
+        
         for (int i = 0; i < shopitemSO.Length; i++)
         {
             shopPanels[i].title.text = shopitemSO[i].title;
@@ -59,10 +60,12 @@ public class ShopManagerScript : MonoBehaviour
 
     public void CheckPurchaseable()
     {
+        
         for(int i = 0; i < shopitemSO.Length; i++)
         {
             if(coins>= shopitemSO[i].baseCost)
             {
+                
                 purchaseButs[i].interactable = true;
             }
             else

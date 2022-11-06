@@ -405,7 +405,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dbc81a0c868e75f43b9f63415332d2e4, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1893,7 +1893,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
       propertyPath: sound.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
       propertyPath: sound.Array.data[7].clip
@@ -2018,6 +2018,14 @@ PrefabInstance:
     - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
       propertyPath: sound.Array.data[21].name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
+      propertyPath: sound.Array.data[22].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: abdbbfd33a46f4549987385f85c536b5, type: 3}
+    - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
+      propertyPath: sound.Array.data[22].name
+      value: Buy
       objectReference: {fileID: 0}
     - target: {fileID: 5098448512802366304, guid: 5a9e8319ea6d3484588de10b7068c5e3, type: 3}
       propertyPath: sound.Array.data[8].volume

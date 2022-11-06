@@ -6,17 +6,38 @@ public class ActiveShop : MonoBehaviour
 {
     public GameObject shop;
     public static bool isShopEnabled = false;
+    public bool isEnter = false;
+    public bool isActive = false;
+    public GameObject prevent;
     
     // Start is called before the first frame update
     void Start()
     {
         shop.SetActive(false);
-        
+        prevent.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isEnter)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            if (Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.C))
+            {
+                if (isActive)
+                {
+                    
+                    DisableShop();
+                }
+                else
+                {
+                    
+                    EnableShop();
+                }
+            }
+        }
+       
         
 
 
@@ -26,7 +47,11 @@ public class ActiveShop : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.None;
+
+            
+            prevent.SetActive(true);
+            isEnter = true;
+           
         }
     }
 
@@ -35,15 +60,19 @@ public class ActiveShop : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-            EnableShop();
+            //EnableShop();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+            Cursor.lockState = CursorLockMode.Locked;
 
-            DisableShop();
+            prevent.SetActive(false);
+            
+            isEnter = false;
+            //DisableShop();
         }
     }
 
@@ -51,7 +80,10 @@ public class ActiveShop : MonoBehaviour
 
     public void EnableShop()
     {
-        Cursor.lockState = CursorLockMode.None;
+        
+        isActive = true;
+        isShopEnabled = true;
+        
         FindObjectOfType<OpenInventory>().CloseInventory();
         shop.SetActive(true);
 
@@ -59,7 +91,10 @@ public class ActiveShop : MonoBehaviour
 
     public void DisableShop()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        isActive = false;
+        isShopEnabled = false;
+        
         shop.SetActive(false);
         
     }

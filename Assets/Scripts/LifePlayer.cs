@@ -50,10 +50,12 @@ public class LifePlayer : MonoBehaviour
             muertesTotal++;
             if(muertesTotal == 1)
             {
+                healthBar.SetHealth(currentHealth);
                 lifes[2].SetActive(false);
             }
             else if(muertesTotal == 2)
             {
+                healthBar.SetHealth(currentHealth);
                 lifes[1].SetActive(false);
             }
             else if(muertesTotal >= 3)
@@ -62,11 +64,12 @@ public class LifePlayer : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("GameOver");
                 lifes[0].SetActive(false);
                 Invoke("ActivePane", 0.5f);
+                Debug.Log("MUERTO");
+                isDeath = true;
             }
             
 
-            Debug.Log("MUERTO");
-            isDeath = true;
+            
         }
     }
 

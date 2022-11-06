@@ -170,6 +170,10 @@ public class PlayerController : MonoBehaviour
             speed = 0;
         }
         
+        if(ActiveShop.isShopEnabled== true)
+        {
+            speed = 0;
+        }
 
     }
 

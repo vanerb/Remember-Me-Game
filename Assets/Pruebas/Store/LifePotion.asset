@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70d64bf5288ecc04bb3c36ef1a29da2f, type: 3}
   m_Name: LifePotion
   m_EditorClassIdentifier: 
-  title: Pocion Vida
-  description: Te otorgara vida acumulable
+  title: Keacan
+  description: "Esta poci\xF3n aumentar\xE1 tu barra de verde y as\xED te podr\xE1s
+    curar "
   baseCost: 40
