@@ -14,6 +14,7 @@ TagManager:
   - ColArm
   - Door
   - Event
+  - cursor
   layers:
   - Default
   - TransparentFX

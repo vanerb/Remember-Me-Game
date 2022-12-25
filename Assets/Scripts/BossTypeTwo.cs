@@ -89,7 +89,7 @@ public class BossTypeTwo : MonoBehaviour
         else
         {
             range = 5.5f;
-            rangeAttack = 1f;
+            rangeAttack = 1.3f;
         }
 
         float distance = Vector2.Distance(player.position, transform.position);

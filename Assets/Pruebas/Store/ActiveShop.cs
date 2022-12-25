@@ -23,7 +23,7 @@ public class ActiveShop : MonoBehaviour
         if (isEnter)
         {
             Cursor.lockState = CursorLockMode.None;
-            if (Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.JoystickButton3) || Input.GetKeyDown(KeyCode.C))
             {
                 if (isActive)
                 {

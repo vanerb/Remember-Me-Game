@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
         {
             this.enabled = false;
         }
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7))
         {
             if (isActive)
             {
@@ -52,6 +52,8 @@ public class PauseMenu : MonoBehaviour
         isActive = false;
         Time.timeScale = 1f;
     }
+
+   
 
     public void Pause()
     {

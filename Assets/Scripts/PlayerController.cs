@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         isNotRun = false;
         particleSystem.enableEmission = false;
 
-
+        sliderChange.value = 0;
 
         shield.SetActive(false);
         timeShield = durationShield;
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Joystick1Button4))
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
             ActiveShield();
         }
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
        
 
             
-       if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+       if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton1))
        {
          TakeLifePlayer();
        }
@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour
 
     public void velocityPlayer()
     {
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton0))
         {
             isNotRun = true;
             //bar.SetActive(true);
@@ -272,7 +272,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Joystick1Button0))
+        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.JoystickButton0))
         {
             isNotRun = false;
             //bar.SetActive(false);

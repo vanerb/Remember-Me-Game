@@ -28,7 +28,7 @@ public class AttackPlayer : MonoBehaviour
     {
         if(Time.time >= nextAttack)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Joystick1Button2))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;

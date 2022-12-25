@@ -17,7 +17,7 @@ public class OpenInventory : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Joystick1Button6))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.JoystickButton6))
         {
 
             OpenClose();

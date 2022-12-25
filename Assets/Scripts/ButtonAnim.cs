@@ -30,4 +30,6 @@ public class ButtonAnim : MonoBehaviour
     {
         imgStatic.sprite = imgNormal;
     }
+
+    
 }

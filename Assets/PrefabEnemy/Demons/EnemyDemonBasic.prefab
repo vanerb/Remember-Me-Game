@@ -149,7 +149,7 @@ MonoBehaviour:
   startPoint: {fileID: 1158406339972598458}
   anim: {fileID: 1158406338922540606}
   rangeDetect: 3.86
-  rangeAttack: 0.78
+  rangeAttack: 1.3
   randomSpeed: 0
   wearpon:
   - {fileID: 21300000, guid: 9f348bc9fa3eadd4e802d2fc0a7d7d87, type: 3}

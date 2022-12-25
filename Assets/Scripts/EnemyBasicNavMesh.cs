@@ -55,7 +55,7 @@ public class EnemyBasicNavMesh : MonoBehaviour
         else
         {
             rangeDetect = 6f;
-            rangeAttack = 0.8f;
+            rangeAttack = 1.3f;
         }
 
         if (enemyLife.currentHealth <= 0)

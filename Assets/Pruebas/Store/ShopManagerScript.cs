@@ -84,19 +84,19 @@ public class ShopManagerScript : MonoBehaviour
             
             CheckPurchaseable();
             //ITEM;
-            if(shopitemSO[btNo].title.ToLower() == "pocion poder")
+            if(shopitemSO[btNo].title.ToLower() == "didoxain")
             {
                 Instantiate(objects[0], player.transform.position, Quaternion.identity);
             }
-            else if(shopitemSO[btNo].title.ToLower() == "pocion veneno")
+            else if(shopitemSO[btNo].title.ToLower() == "agony seed")
             {
                 Instantiate(objects[2], player.transform.position, Quaternion.identity);
             }
-            else if(shopitemSO[btNo].title.ToLower() == "pocion vida")
+            else if(shopitemSO[btNo].title.ToLower() == "keacan")
             {
                 Instantiate(objects[1], player.transform.position, Quaternion.identity);
             }
-            else if (shopitemSO[btNo].title.ToLower() == "pocion invisibilidad")
+            else if (shopitemSO[btNo].title.ToLower() == "wraith tears")
             {
                 Instantiate(objects[3], player.transform.position, Quaternion.identity);
             }

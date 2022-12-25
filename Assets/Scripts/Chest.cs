@@ -19,7 +19,7 @@ public class Chest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && isSpawned == false || Input.GetKeyDown(KeyCode.Joystick1Button3) && isSpawned == false)
+        if (Input.GetKeyDown(KeyCode.C) && isSpawned == false || Input.GetKeyDown(KeyCode.JoystickButton3) && isSpawned == false)
         {
             if(isIn == true)
             {
