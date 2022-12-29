@@ -22,23 +22,26 @@ public class ShootPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.JoystickButton5))
+        if (SkillTree.skillTree.skillLevels[1] >= SkillTree.skillTree.skillCaps[1])
         {
-            if(nextFireTime < Time.time)
+            if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.JoystickButton5))
             {
-                FindObjectOfType<AudioManager>().Play("Flecha");
-                anim.Play("ShootPlayer");
-                Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-                nextFireTime = Time.time + attackRate;
-            }
-            
-        }
+                if (nextFireTime < Time.time)
+                {
+                    FindObjectOfType<AudioManager>().Play("Flecha");
+                    anim.Play("ShootPlayer");
+                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+                    nextFireTime = Time.time + attackRate;
+                }
 
-        
-        
-        
+            }
+        }
     }
+        
+        
+        
+ }
 
    
     
-}
+

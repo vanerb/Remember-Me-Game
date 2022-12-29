@@ -16,6 +16,11 @@ public class AttackPlayer : MonoBehaviour
     public int damage;
 
 
+    public Sprite sword;
+    public SpriteRenderer swordSprite;
+    public Sprite swordlegendary;
+
+
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +31,74 @@ public class AttackPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= nextAttack)
+        if(SkillTree.skillTree.skillLevels[0] >= SkillTree.skillTree.skillCaps[0])
+        {
+            swordSprite.sprite = sword;
+            damage = 20;
+        }
+
+
+        else
+        {
+            damage = 10;
+        }
+
+        if (SkillTree.skillTree.skillLevels[3] >= SkillTree.skillTree.skillCaps[3])
+        {
+            swordSprite.sprite = swordlegendary;
+            damage = 25;
+        }
+
+        if (SkillTree.skillTree.skillLevels[5] >= 1 && SkillTree.skillTree.skillLevels[5] <= SkillTree.skillTree.skillCaps[5])
+        {
+            switch (SkillTree.skillTree.skillLevels[5])
+            {
+                case 0:
+                    damage = 22;
+                    break;
+                case 1:
+                    damage = 24;
+                    break;
+
+                case 2:
+                    damage = 26;
+                    break;
+
+                case 3:
+                    damage = 28;
+                    break;
+
+                case 4:
+                    damage = 30;
+                    break;
+
+                case 5:
+                    damage = 32;
+                    break;
+
+                case 6:
+                    damage = 34;
+                    break;
+
+                case 7:
+                    damage = 36;
+                    break;
+
+                case 8:
+                    damage = 38;
+                    break;
+                case 9:
+                    damage = 40;
+                    break;
+
+                case 10:
+                    damage = 42;
+                    break;
+            }
+        }
+
+
+        if (Time.time >= nextAttack)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.JoystickButton2))
             {

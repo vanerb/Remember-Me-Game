@@ -14,6 +14,7 @@ public class EnemyLife : MonoBehaviour
     public Animator anim;
     private int randomSpawn;
     public Points points;
+    public XpTimer xpTimer;
     
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class EnemyLife : MonoBehaviour
         currentHealth = maxHealth;
         randomSpawn = Random.Range(0, 5);
         points = GameObject.FindGameObjectWithTag("Player").GetComponent<Points>();
+        xpTimer = GameObject.FindGameObjectWithTag("timer").GetComponent<XpTimer>();
     }
 
     // Update is called once per frame
@@ -30,14 +32,11 @@ public class EnemyLife : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            xpTimer.time -= 0.3f;
             points.SumarPuntos(Random.Range(0, 10));
             ModifyLayer.isDeleted = true;
             anim.Play("Death");
         }
-       /* if (currentHealth >= 100)
-        {
-            currentHealth = maxHealth;
-        }*/
     }
 
     public void TakeDamage(int damage)
@@ -48,7 +47,6 @@ public class EnemyLife : MonoBehaviour
         anim.SetTrigger("Damage");
         if (currentHealth <= 0 && randomSpawn == 2)
         {
-            
             Instantiate(items[random], startPoint.transform.position, Quaternion.identity);
             Destroy(this.gameObject);
             Debug.Log("MUERTO");

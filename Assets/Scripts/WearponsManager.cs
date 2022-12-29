@@ -31,14 +31,17 @@ public class WearponsManager : MonoBehaviour
             swordWearpon.SetActive(true);
             BowGameObject.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+        if (SkillTree.skillTree.skillLevels[1] >= SkillTree.skillTree.skillCaps[1])
         {
-            wearponSelect = 2;
-            attackSword.enabled = false;
-            bowPlayer.enabled = true;
-            swordWearpon.SetActive(false);
-            BowGameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+            {
+                wearponSelect = 2;
+                attackSword.enabled = false;
+                bowPlayer.enabled = true;
+                swordWearpon.SetActive(false);
+                BowGameObject.SetActive(true);
+            }
         }
     }
 }
+

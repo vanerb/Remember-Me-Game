@@ -15,6 +15,7 @@ TagManager:
   - Door
   - Event
   - cursor
+  - timer
   layers:
   - Default
   - TransparentFX

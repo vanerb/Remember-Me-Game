@@ -119,23 +119,67 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton4))
+        if (SkillTree.skillTree.skillLevels[2] >= SkillTree.skillTree.skillCaps[2])
         {
-            ActiveShield();
-        }
-        if(isShieldActive== true)
-        {
-            timeShield -= Time.deltaTime;
-            if (timeShield <= 0)
+            if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton4))
             {
-                shield.SetActive(false);
-                isShieldActive = false;
-                Invoke("RestoreTimeShield", 3.7f);
+                ActiveShield();
+            }
+            if (isShieldActive == true)
+            {
+                timeShield -= Time.deltaTime;
+                if (timeShield <= 0)
+                {
+                    shield.SetActive(false);
+                    isShieldActive = false;
+                    Invoke("RestoreTimeShield", 3.7f);
+                }
+            }
+
+            if (SkillTree.skillTree.skillLevels[4] >= 1 && SkillTree.skillTree.skillLevels[4] <= SkillTree.skillTree.skillCaps[4])
+            {
+
+
+                switch (SkillTree.skillTree.skillLevels[4])
+                {
+                    case 0:
+                        durationShield = 2.5f;
+                        break;
+                    case 1:
+                        durationShield = 3f;
+                        break;
+
+                    case 2:
+                        durationShield = 3.5f;
+                        break;
+
+                    case 3:
+                        durationShield = 4f;
+                        break;
+
+                    case 4:
+                        durationShield = 4.5f;
+                        break;
+
+                    case 5:
+                        durationShield = 5f;
+                        break;
+
+                    case 6:
+                        durationShield = 5.5f;
+                        break;
+
+                    case 7:
+                        durationShield = 6f;
+                        break;
+
+                    case 8:
+                        durationShield = 6.5f;
+                        break;
+                }
+
             }
         }
-       
-
             
        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton1))
        {
@@ -171,6 +215,11 @@ public class PlayerController : MonoBehaviour
         }
         
         if(ActiveShop.isShopEnabled== true)
+        {
+            speed = 0;
+        }
+
+        if (OpenAbilityTree.isEnabled == false)
         {
             speed = 0;
         }

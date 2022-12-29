@@ -29,7 +29,79 @@ public class LifePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentHealth >= 100)
+        if (SkillTree.skillTree.skillLevels[6] >= 1 && SkillTree.skillTree.skillLevels[6] <= SkillTree.skillTree.skillCaps[6])
+        {
+
+
+            switch (SkillTree.skillTree.skillLevels[6])
+            {
+                case 0:
+                    maxHealth = 105;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+                case 1:
+                    maxHealth = 110;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 2:
+                    maxHealth = 115;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 3:
+                    maxHealth = 120;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 4:
+                    maxHealth = 125;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 5:
+                    maxHealth = 130;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 6:
+                    maxHealth = 135;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 7:
+                    maxHealth = 140;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 8:
+                    maxHealth = 145;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+                    break;
+
+                case 9:
+                    maxHealth = 150;
+                    healthBar.SetMaxHealth(maxHealth);
+                    healthBar.SetHealth(currentHealth);
+
+                    break;
+
+            }
+        }
+
+        
+
+
+        if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
