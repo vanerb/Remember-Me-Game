@@ -21,27 +21,22 @@ public class AttackPlayer : MonoBehaviour
     public Sprite swordlegendary;
 
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(SkillTree.skillTree.skillLevels[0] >= SkillTree.skillTree.skillCaps[0])
+        if (SkillTree.skillTree.skillLevels[0] >= SkillTree.skillTree.skillCaps[0])
         {
             swordSprite.sprite = sword;
             damage = 20;
         }
-
-
-        else
-        {
-            damage = 10;
-        }
+        
 
         if (SkillTree.skillTree.skillLevels[3] >= SkillTree.skillTree.skillCaps[3])
         {
@@ -104,10 +99,10 @@ public class AttackPlayer : MonoBehaviour
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;
-                
+
             }
         }
-        
+
     }
 
 
@@ -118,15 +113,23 @@ public class AttackPlayer : MonoBehaviour
 
         Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
-        foreach(Collider2D enemy in hitEnemy)
+        foreach (Collider2D enemy in hitEnemy)
         {
-            enemy.GetComponent<EnemyLife>().TakeDamage(damage);
-            
+            if (PowerPotion.isPotionActive == true)
+            {
+                enemy.GetComponent<EnemyLife>().TakeDamage(damage+30);
+            }
+            else
+            {
+                enemy.GetComponent<EnemyLife>().TakeDamage(damage);
+
+            }
+
             Debug.Log("ATACANDO");
         }
     }
 
-   
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);

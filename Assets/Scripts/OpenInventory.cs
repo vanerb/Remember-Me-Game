@@ -28,7 +28,7 @@ public class OpenInventory : MonoBehaviour
     {
         if (isActive)
         {
-            if(!ActiveShop.isShopEnabled && !LifePlayer.isDeath && !PauseMenu.isActive)
+            if(!ActiveShop.isShopEnabled && !LifePlayer.isDeath && !PauseMenu.isActive && OpenAbilityTree.isEnabled && OpenBook.isBookEnabled && OpenStorageBook.isActive)
             {
                 OpenInventori();
             }
@@ -46,7 +46,6 @@ public class OpenInventory : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
-
         inventory.SetActive(true);
         isActive = false;
     }

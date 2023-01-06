@@ -54,7 +54,9 @@ public class PlayerController : MonoBehaviour
     public float durationShield;
     public GameObject shield;
 
-
+    public GameObject panelArrow;
+    public Text textArrow;
+    public ShootPlayer shootPlayer;
    
     
    
@@ -77,6 +79,8 @@ public class PlayerController : MonoBehaviour
 
         shield.SetActive(false);
         timeShield = durationShield;
+
+        panelArrow.SetActive(false);
         
     }
 
@@ -95,7 +99,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-       
+        textArrow.text = "" + shootPlayer.arrow;
+        if (SkillTree.skillTree.skillLevels[1] >= SkillTree.skillTree.skillCaps[1])
+        {
+            panelArrow.SetActive(true);
+        }
 
 
         if (lifePlayer.currentHealth <= 0)
@@ -235,10 +243,10 @@ public class PlayerController : MonoBehaviour
             potionSlider.SetActive(true);
             potionPowerSlider.value = timePotion;
             timePotion -= Time.deltaTime;
-            attackPlayer.damage = 50;
+            //attackPlayer.damage += 30;
             if (timePotion <= 0)
             {
-                attackPlayer.damage = 20;
+                //attackPlayer.damage -= 30;
                 PowerPotion.isPotionActive = false;
                 timePotion = 0;
                 potionSlider.SetActive(false);

@@ -26,7 +26,7 @@ public class SkillTree : MonoBehaviour
     void Start()
     {
         
-        skillPoint = 0;
+        skillPoint = 10;
         skillLevels = new int[7];
         skillCaps = new[] { 1, 1, 1, 1, 8, 10, 9 };
         skillNames = new[] { "Mejora Espada", "Arco", "Escudo", "Espada Legendaria", "Duracion escudo", "Aumento daño" , "Aumento vida"};

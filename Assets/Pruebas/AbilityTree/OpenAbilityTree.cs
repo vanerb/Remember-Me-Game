@@ -45,7 +45,6 @@ public class OpenAbilityTree : MonoBehaviour
         FindObjectOfType<PauseMenu>().Resume();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
-
         abilityTree.SetActive(true);
 
         isEnabled = false;
