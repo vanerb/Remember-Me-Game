@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
 
     
-    private float horizontalMove;
+    public float horizontalMove;
 
-    private float verticalMove;
+    public float verticalMove;
 
     private Rigidbody2D rb2d;
 
@@ -228,6 +228,11 @@ public class PlayerController : MonoBehaviour
         }
 
         if (OpenAbilityTree.isEnabled == false)
+        {
+            speed = 0;
+        }
+
+        if(OpenMap.isActive == false)
         {
             speed = 0;
         }

@@ -28,7 +28,7 @@ public class OpenInventory : MonoBehaviour
     {
         if (isActive)
         {
-            if(!ActiveShop.isShopEnabled && !LifePlayer.isDeath && !PauseMenu.isActive && OpenAbilityTree.isEnabled && OpenBook.isBookEnabled && OpenStorageBook.isActive)
+            if(!ActiveShop.isShopEnabled && !LifePlayer.isDeath && !PauseMenu.isActive && OpenAbilityTree.isEnabled && OpenBook.isBookEnabled && OpenStorageBook.isActive && OpenMap.isActive)
             {
                 OpenInventori();
             }

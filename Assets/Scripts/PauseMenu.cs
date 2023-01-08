@@ -63,6 +63,7 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<OpenStorageBook>().CloseInventory();
         FindObjectOfType<ActiveShop>().DisableShop();
         FindObjectOfType<OpenAbilityTree>().CloseTree();
+        FindObjectOfType<OpenMap>().CloseInventory();
         Cursor.lockState = CursorLockMode.None;
         FindObjectOfType<AudioManager>().Play("Pause");
         
