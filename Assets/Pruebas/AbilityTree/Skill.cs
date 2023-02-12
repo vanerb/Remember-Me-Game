@@ -9,6 +9,7 @@ public class Skill : MonoBehaviour
     public Text txtTitle;
     public Text txtDexription;
     public int[] connectedUpgrades;
+    public AudioSource audiobuy;
 
     public void UpdateUI()
     {
@@ -35,7 +36,7 @@ public class Skill : MonoBehaviour
 
             return;
         }
-        
+        audiobuy.Play();
         skillTree.skillPoint -= 1;
         skillTree.skillLevels[id]++;
         skillTree.UpdateAllSkillUi();
