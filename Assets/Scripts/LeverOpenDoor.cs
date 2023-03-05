@@ -11,6 +11,9 @@ public class LeverOpenDoor : MonoBehaviour
 
     public bool isInside;
 
+    public CameraFollowObject cameraController;
+    public int focusPointIndex;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,10 @@ public class LeverOpenDoor : MonoBehaviour
             anim.enabled = true;
                 isActive = true;
                 anim.Play("Active");
-         }
+            Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.3f);
+            Activate();
+
+        }
 
         if (Input.GetKeyDown(KeyCode.JoystickButton3) && isInside == true)
         {
@@ -35,6 +41,8 @@ public class LeverOpenDoor : MonoBehaviour
             anim.enabled = true;
             isActive = true;
             anim.Play("Active");
+            Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.2f, 0.2f);
+            Activate();
         }
 
     }
@@ -55,5 +63,11 @@ public class LeverOpenDoor : MonoBehaviour
             anim.enabled = false;
             isInside = false;
         }
+    }
+
+    public void Activate()
+    {
+
+        cameraController.FocusOn(focusPointIndex);
     }
 }

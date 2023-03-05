@@ -51,5 +51,6 @@ public class EnemyLife : MonoBehaviour
             Destroy(this.gameObject);
             Debug.Log("MUERTO");
         }
+        
     }
 }

@@ -8,7 +8,9 @@ public class OpenDoorByLife : MonoBehaviour
     public ActivateDoorDeath active;
     public Animator anim;
     public BoxCollider2D colliderLimit;
-    
+
+    public CameraFollowObject cameraController;
+    public int focusPointIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,15 @@ public class OpenDoorByLife : MonoBehaviour
             Debug.Log("ESTOY ABIERTO");
             // lever.isActive = false;
             colliderLimit.enabled = false;
+            Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.3f);
+            Activate();
+            active.isDeath = false;
         }
+    }
+
+    public void Activate()
+    {
+
+        cameraController.FocusOn(focusPointIndex);
     }
 }

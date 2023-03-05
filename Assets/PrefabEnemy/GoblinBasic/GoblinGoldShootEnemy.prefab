@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 745592762088106858}
   - component: {fileID: 745592762088106863}
   - component: {fileID: 8035076530930099994}
+  - component: {fileID: 7825262369416756291}
   m_Layer: 6
   m_Name: EnemyGoblinShootGold
   m_TagString: Enemy
@@ -323,6 +324,18 @@ MonoBehaviour:
   pointOfShoot: {fileID: 760168113468139989}
   bullet: {fileID: 7006238070017937837, guid: 6057ed7fd1a59b94eacbca4506795e44, type: 3}
   navMeshAgent: {fileID: 745592762088106857}
+--- !u!114 &7825262369416756291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745592762088106870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745592762806446963
 GameObject:
   m_ObjectHideFlags: 0

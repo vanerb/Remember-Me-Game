@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 4313979327332601087}
   - component: {fileID: 2397543004395568958}
   - component: {fileID: 7152642476556606812}
+  - component: {fileID: 2578311218337135730}
   m_Layer: 6
   m_Name: EnemyDuende
   m_TagString: Enemy
@@ -508,6 +509,18 @@ NavMeshAgent:
   m_BaseOffset: 0.75
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2578311218337135730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465273265335683057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4244988434003850293
 GameObject:
   m_ObjectHideFlags: 0

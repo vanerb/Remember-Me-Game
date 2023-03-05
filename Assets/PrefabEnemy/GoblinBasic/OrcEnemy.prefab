@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 590099936456537770}
   - component: {fileID: 590099936456537773}
   - component: {fileID: 590099936456537771}
+  - component: {fileID: 8168920187937641425}
   m_Layer: 6
   m_Name: EnemyOrc
   m_TagString: Enemy
@@ -242,6 +243,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65173006, y: 0.9738579}
   m_EdgeRadius: 0
+--- !u!114 &8168920187937641425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590099936456537808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590099936867733499
 GameObject:
   m_ObjectHideFlags: 0

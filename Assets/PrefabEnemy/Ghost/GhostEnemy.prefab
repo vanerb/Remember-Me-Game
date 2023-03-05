@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 8074180743429064456}
   - component: {fileID: 8074180743429064457}
   - component: {fileID: 8074180743429064459}
+  - component: {fileID: 2884091738625790966}
   m_Layer: 6
   m_Name: EnemyGhost
   m_TagString: Enemy
@@ -649,3 +650,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.63434315, y: 1.0765808}
   m_EdgeRadius: 0
+--- !u!114 &2884091738625790966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074180743429064466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

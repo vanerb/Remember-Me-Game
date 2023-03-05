@@ -112,6 +112,8 @@ public class LifePlayer : MonoBehaviour
     public void TakeDamage(int damage)
     {
         FindObjectOfType<AudioManager>().Play("PlayerHit");
+        Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.1f, 0.3f);
+
         currentHealth -= damage;
         Debug.Log("La vida actual es de: " + currentHealth);
         healthBar.SetHealth(currentHealth);
@@ -124,16 +126,22 @@ public class LifePlayer : MonoBehaviour
             {
                 healthBar.SetHealth(currentHealth);
                 lifes[2].SetActive(false);
+                Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.5f);
+
             }
             else if(muertesTotal == 2)
             {
                 healthBar.SetHealth(currentHealth);
                 lifes[1].SetActive(false);
+                Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.5f);
+
             }
             else if(muertesTotal == 3)
             {
                 healthBar.SetHealth(currentHealth);
                 lifes[0].SetActive(false);
+                Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.5f);
+
             }
             else if(muertesTotal > 3)
             {
@@ -144,10 +152,11 @@ public class LifePlayer : MonoBehaviour
                 Invoke("ActivePane", 0.5f);
                 Debug.Log("MUERTO");
                 isDeath = true;
-            }
-            
 
-            
+            }
+
+
+
         }
     }
 

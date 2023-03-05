@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 745592762088106857}
   - component: {fileID: 745592762088106858}
   - component: {fileID: 745592762088106863}
+  - component: {fileID: 377337647987039767}
   m_Layer: 6
   m_Name: EnemyGoblinGold
   m_TagString: Enemy
@@ -396,6 +397,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6523783, y: 1.0102631}
   m_EdgeRadius: 0
+--- !u!114 &377337647987039767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745592762088106870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745592762806446963
 GameObject:
   m_ObjectHideFlags: 0

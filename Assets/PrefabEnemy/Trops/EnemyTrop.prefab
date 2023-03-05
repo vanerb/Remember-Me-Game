@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 4381266031795771388}
   - component: {fileID: 4381266031795771384}
   - component: {fileID: 868919827462746700}
+  - component: {fileID: 24087595384721471}
   m_Layer: 6
   m_Name: EnemyTropBasic
   m_TagString: Enemy
@@ -407,6 +408,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67654395, y: 1.0059264}
   m_EdgeRadius: 0
+--- !u!114 &24087595384721471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381266031795770882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4381266031966240232
 GameObject:
   m_ObjectHideFlags: 0

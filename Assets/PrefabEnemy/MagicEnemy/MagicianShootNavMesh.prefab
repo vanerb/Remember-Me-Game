@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 6480651431078179623}
   - component: {fileID: 6480651431078179637}
   - component: {fileID: 6480651431078179640}
+  - component: {fileID: 6316009891757024625}
   m_Layer: 6
   m_Name: EnemyShoot
   m_TagString: Enemy
@@ -524,6 +525,18 @@ MonoBehaviour:
   pointOfShoot: {fileID: 6480651429185552081}
   bullet: {fileID: 7006238070017937837, guid: 6057ed7fd1a59b94eacbca4506795e44, type: 3}
   navMeshAgent: {fileID: 6480651431078179637}
+--- !u!114 &6316009891757024625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6480651431078179646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff4ce911215874aa36c158122d5a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7794514312122995120
 GameObject:
   m_ObjectHideFlags: 0

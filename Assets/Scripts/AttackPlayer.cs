@@ -115,6 +115,7 @@ public class AttackPlayer : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemy)
         {
+            //Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.1f, 0.1f);
             if (PowerPotion.isPotionActive == true)
             {
                 enemy.GetComponent<EnemyLife>().TakeDamage(damage+30);
@@ -124,9 +125,15 @@ public class AttackPlayer : MonoBehaviour
                 enemy.GetComponent<EnemyLife>().TakeDamage(damage);
 
             }
-
+            EnemyController enemyController = enemy.gameObject.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                Vector2 direction = enemy.transform.position - transform.position;
+                enemyController.ApplyForce(direction.normalized * 2f);
+            }
             Debug.Log("ATACANDO");
         }
+       
     }
 
 

@@ -11,6 +11,7 @@ public class XpTimer : MonoBehaviour
     public GameObject panelLevelup;
     public bool isPassed = false;
     public int totalpoints;
+    public GameObject symbol;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class XpTimer : MonoBehaviour
         panelLevelup.SetActive(false);
         isPassed = false;
         totalpoints = SkillTree.skillTree.skillPoint;
+        symbol.SetActive(false);
     }
 
     // Update is called once per frame
@@ -56,6 +58,7 @@ public class XpTimer : MonoBehaviour
             if (time <= 0)
             {
                 panelLevelup.SetActive(true);
+                symbol.SetActive(true);
                 StartCoroutine(timeToPanel(3f));
                 Vector2 playerPos = new Vector2(player.position.x, player.position.y);
                 Instantiate(potionxp, playerPos, Quaternion.identity);
@@ -77,5 +80,6 @@ public class XpTimer : MonoBehaviour
 
         yield return new WaitForSeconds(time);
         panelLevelup.SetActive(false);
+        symbol.SetActive(false);
     }
 }
