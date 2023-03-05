@@ -237,6 +237,10 @@ public class PlayerController : MonoBehaviour
             speed = 0;
         }
 
+        if (CameraFollowObject.isActiveObject)
+        {
+            speed = 0;
+        }
     }
 
     public void Potion()

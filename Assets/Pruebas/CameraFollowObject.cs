@@ -14,10 +14,13 @@ public class CameraFollowObject : MonoBehaviour
     private Vector3 originalPosition; // Posición original de la cámara
     private Quaternion originalRotation; // Rotación original de la cámara
     public GameObject cameraObject;
+
+    public static bool isActiveObject;
     void Start()
     {
         originalPosition = transform.position;
         originalRotation = transform.rotation;
+        
     }
 
     void Update()
@@ -46,16 +49,10 @@ public class CameraFollowObject : MonoBehaviour
         transform.position = originalPosition;
         transform.rotation = originalRotation;
         cameraObject.SetActive(false);
+        isActiveObject = false;
     }
 
-    public void FocusOff()
-    {
-        isFocusing = false;
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-        cameraObject.SetActive(false);
-
-    }
+   
 
     public void FocusOn(int focusIndex)
     {
@@ -67,6 +64,8 @@ public class CameraFollowObject : MonoBehaviour
 
         // Indica que la cámara está enfocando un punto
         isFocusing = true;
+        isActiveObject = true;
+
     }
 
 }
