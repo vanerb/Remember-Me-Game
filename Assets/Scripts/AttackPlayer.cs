@@ -129,7 +129,7 @@ public class AttackPlayer : MonoBehaviour
             if (enemyController != null)
             {
                 Vector2 direction = enemy.transform.position - transform.position;
-                enemyController.ApplyForce(direction.normalized * 2f);
+                enemyController.ApplyForce(direction.normalized * 1.5f);
             }
             Debug.Log("ATACANDO");
         }

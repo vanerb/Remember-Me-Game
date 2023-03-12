@@ -48,8 +48,8 @@ public class EnemyLife : MonoBehaviour
         if (currentHealth <= 0 && randomSpawn == 2)
         {
             Instantiate(items[random], startPoint.transform.position, Quaternion.identity);
-            Destroy(this.gameObject);
-            Debug.Log("MUERTO");
+            //ModifyLayer.isDeleted = true;
+            //anim.Play("Death");
         }
         
     }
