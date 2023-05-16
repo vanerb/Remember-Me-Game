@@ -29,8 +29,8 @@ public class SkillTree : MonoBehaviour
         skillPoint =  0;
         skillLevels = new int[7];
         skillCaps = new[] { 1, 1, 1, 1, 8, 10, 9 };
-        skillNames = new[] { "Mejora Espada", "Arco", "Escudo", "Espada Legendaria", "Duracion escudo", "Aumento daño" , "Aumento vida"};
-        skilDescription = new[] { "Repara la espada equipada para hacer mas daño", "Equipate con un arco y flechas", "Equipate con un escudo que te ayudara a defenderte de los enemigos", "Equipate con una espada legendaria que te proporcionara mucho margen de mejora", "Aumenta el tiempo en el que puedes tener proteccion con el escudo", "Aumenta tu fuerza y por lo tanto tu daño con la espada", "Aumenta tu barra de vida"};
+        skillNames = new[] { "Mejora Espada", "Arco", "Escudo", "Espada Legendaria", "Duración escudo", "Aumento daño" , "Aumento vida"};
+        skilDescription = new[] { "Repara la espada equipada para hacer más daño", "Equípate con un arco y flechas", "Equípate con un escudo que te ayudará a defenderte de los enemigos", "Equípate con una espada legendaria que te proporcionará mucho márgen de mejora", "Aumenta el tiempo en el que puedes tener protección con el escudo", "Aumenta tu fuerza y por lo tanto tu daño con la espada", "Aumenta tu barra de vida"};
         
 
         foreach(var skill in skillHolder.GetComponentsInChildren<Skill>()) 

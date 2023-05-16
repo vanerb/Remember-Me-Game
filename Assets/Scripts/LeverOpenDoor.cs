@@ -13,11 +13,15 @@ public class LeverOpenDoor : MonoBehaviour
 
     public CameraFollowObject cameraController;
     public int focusPointIndex;
+    public GameObject tutorial;
+    public static bool ispassed = false;
 
     // Start is called before the first frame update
     void Start()
     {
         anim.enabled = false;
+        ispassed = false;
+        
         
     }
 
@@ -32,6 +36,8 @@ public class LeverOpenDoor : MonoBehaviour
                 anim.Play("Active");
             Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.3f, 0.3f);
             Activate();
+            ispassed = true;
+            tutorial.SetActive(false);
 
         }
 
@@ -43,6 +49,7 @@ public class LeverOpenDoor : MonoBehaviour
             anim.Play("Active");
             Camera.main.GetComponent<CameraFollow>().ShakeCamera(0.2f, 0.2f);
             Activate();
+            ispassed = true;
         }
 
     }
@@ -52,7 +59,20 @@ public class LeverOpenDoor : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInside = true;
+            
           
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if(ispassed == false)
+            {
+                tutorial.SetActive(true);
+
+            }
         }
     }
 
@@ -62,6 +82,8 @@ public class LeverOpenDoor : MonoBehaviour
         {
             anim.enabled = false;
             isInside = false;
+            tutorial.SetActive(false);
+
         }
     }
 

@@ -4,38 +4,36 @@ using UnityEngine;
 
 public class CameraFollowObject : MonoBehaviour
 {
-    public Transform[] focusPoints; // Array de objetos que representan los puntos de enfoque
-    public float moveSpeed = 5f; // Velocidad de movimiento de la cámara
-    public float waitTime = 1f; // Tiempo de espera después de enfocar un punto
+    public Transform[] focusPoints;
+    public float moveSpeed = 6f;
+    public float waitTime = 1f;
 
-    private Transform currentFocusPoint; // Objeto actual que la cámara está enfocando
-    private bool isFocusing = false; // Indica si la cámara está enfocando un punto
+    private Transform currentFocusPoint;
+    private Transform lastFocusPoint;
+    public bool isFocusing = false;
 
-    private Vector3 originalPosition; // Posición original de la cámara
-    private Quaternion originalRotation; // Rotación original de la cámara
+    private Quaternion originalRotation;
     public GameObject cameraObject;
 
     public static bool isActiveObject;
+
+
     void Start()
     {
-        originalPosition = transform.position;
+        // Asigna la posición actual del jugador como la posición inicial de la cámara
+        transform.position = Camera.main.transform.position;
         originalRotation = transform.rotation;
-        
     }
 
     void Update()
     {
         if (isFocusing)
         {
-            // Mueve la cámara hacia el punto de enfoque actual
             transform.position = Vector3.MoveTowards(transform.position, currentFocusPoint.position, moveSpeed * Time.deltaTime);
 
-            // Si la cámara ha llegado al punto de enfoque actual, espera un tiempo antes de volver a la posición original
             if (transform.position == currentFocusPoint.position)
             {
                 StartCoroutine(WaitBeforeReturning());
-                //cameraObject.SetActive(false);
-
             }
         }
     }
@@ -44,28 +42,35 @@ public class CameraFollowObject : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
 
-        // Vuelve la cámara a su posición original
+        // Actualiza el último punto de enfoque
+        lastFocusPoint = currentFocusPoint;
+
         isFocusing = false;
-        transform.position = originalPosition;
+        // Vuelve la cámara a la posición actual del jugador en lugar de la posición original de la cámara
+        transform.position = Camera.main.transform.position;
         transform.rotation = originalRotation;
         cameraObject.SetActive(false);
         isActiveObject = false;
     }
 
-   
-
     public void FocusOn(int focusIndex)
     {
         cameraObject.SetActive(true);
+        if (isFocusing)
+        {
+            if (lastFocusPoint != null)
+            {
+                currentFocusPoint = lastFocusPoint;
+                return;
+            }
+        }
+
         if (focusIndex < 0 || focusIndex >= focusPoints.Length) return;
 
-        // Guarda el objeto actual que la cámara está enfocando
         currentFocusPoint = focusPoints[focusIndex];
 
-        // Indica que la cámara está enfocando un punto
         isFocusing = true;
         isActiveObject = true;
-
     }
 
 }

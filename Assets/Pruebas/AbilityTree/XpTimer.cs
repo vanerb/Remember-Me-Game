@@ -12,6 +12,8 @@ public class XpTimer : MonoBehaviour
     public bool isPassed = false;
     public int totalpoints;
     public GameObject symbol;
+    public static bool ispassed;
+    public GameObject tutorial;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class XpTimer : MonoBehaviour
         isPassed = false;
         totalpoints = SkillTree.skillTree.skillPoint;
         symbol.SetActive(false);
+        ispassed = false;
     }
 
     // Update is called once per frame
@@ -81,5 +84,20 @@ public class XpTimer : MonoBehaviour
         yield return new WaitForSeconds(time);
         panelLevelup.SetActive(false);
         symbol.SetActive(false);
+        if(ispassed == false)
+        {
+            tutorial.SetActive(true);
+            StartCoroutine(timeTotutorial(5));
+
+        }
+
+    }
+
+    IEnumerator timeTotutorial(float time)
+    {
+        yield return new WaitForSeconds(time);
+        tutorial.SetActive(false);
+        ispassed = true;
+
     }
 }

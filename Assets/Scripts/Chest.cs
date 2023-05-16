@@ -10,10 +10,13 @@ public class Chest : MonoBehaviour
     public bool isSpawned = false;
     public bool isIn = false;
     public Animator anim;
+    public GameObject tutorial;
+    public static bool ispassed = false;
     // Start is called before the first frame update
     void Start()
     {
         anim.enabled = false;
+        ispassed = false;
     }
 
     // Update is called once per frame
@@ -28,8 +31,11 @@ public class Chest : MonoBehaviour
                 anim.Play("Active");
                 Instantiate(objects[random], startPoint.transform.position, Quaternion.identity);
                 isSpawned = true;
+                ispassed = true;
+                tutorial.SetActive(false);
+
             }
-           
+
         }
     }
 
@@ -41,6 +47,11 @@ public class Chest : MonoBehaviour
         {
             anim.enabled = true;
             isIn = true;
+            if(ispassed == false)
+            {
+                tutorial.SetActive(true);
+
+            }
         }
         
     }
@@ -51,6 +62,7 @@ public class Chest : MonoBehaviour
         {
             anim.enabled = false;
             isIn = false;
+            tutorial.SetActive(false);
         }
     }
 }

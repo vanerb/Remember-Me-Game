@@ -19,13 +19,15 @@ public class AttackPlayer : MonoBehaviour
     public Sprite sword;
     public SpriteRenderer swordSprite;
     public Sprite swordlegendary;
+    public static bool ispassed;
+    public GameObject tutorial;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        ispassed = false;
     }
 
     // Update is called once per frame
@@ -91,6 +93,10 @@ public class AttackPlayer : MonoBehaviour
                     break;
             }
         }
+        if(ispassed == false)
+        {
+            tutorial.SetActive(true);
+        }
 
 
         if (Time.time >= nextAttack)
@@ -99,6 +105,8 @@ public class AttackPlayer : MonoBehaviour
             {
                 Attack();
                 nextAttack = Time.time + 1f / attackRate;
+                tutorial.SetActive(false);
+                ispassed = true;
 
             }
         }

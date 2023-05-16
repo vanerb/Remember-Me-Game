@@ -57,9 +57,22 @@ public class PlayerController : MonoBehaviour
     public GameObject panelArrow;
     public Text textArrow;
     public ShootPlayer shootPlayer;
-   
+    public static bool ispassed;
+    public GameObject tutorial;
+
+    public static bool ispassedcurar;
+    public GameObject tutorialCurar;
+
+    public static bool ispassedArrow;
+    public GameObject tutorialArrow;
+
+
+    public GameObject AbilityTree;
+
+
+
+    public CameraFollowObject cameraFollowObject;
     
-   
 
     void Start()
     {
@@ -81,6 +94,9 @@ public class PlayerController : MonoBehaviour
         timeShield = durationShield;
 
         panelArrow.SetActive(false);
+        ispassed = false;
+        ispassedcurar = false;
+        ispassedArrow = false;
         
     }
 
@@ -102,8 +118,33 @@ public class PlayerController : MonoBehaviour
         textArrow.text = "" + shootPlayer.arrow;
         if (SkillTree.skillTree.skillLevels[1] >= SkillTree.skillTree.skillCaps[1])
         {
+            
             panelArrow.SetActive(true);
+            if (ispassedArrow == false)
+            {
+                AbilityTree.SetActive(false);
+                //OpenAbilityTree.isEnabled = false;
+                tutorialArrow.SetActive(true);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                if(ispassedArrow == false)
+                {
+                    AbilityTree.SetActive(true);
+
+                }
+
+                ispassedArrow = true;
+                tutorialArrow.SetActive(false);
+                
+
+
+            }
+
         }
+
+       
 
 
         if (lifePlayer.currentHealth <= 0)
@@ -125,13 +166,39 @@ public class PlayerController : MonoBehaviour
        
         changeLife.SetHealth(TakeLife.pickObject);
 
+        if (TakeLife.pickObject > 0)
+        {
+            if(ispassedcurar == false)
+            {
+                tutorialCurar.SetActive(true);
+            }
+            
+        }
 
+        
 
         if (SkillTree.skillTree.skillLevels[2] >= SkillTree.skillTree.skillCaps[2])
         {
+            
+
+            if (ispassed == false)
+            {
+                AbilityTree.SetActive(false);
+
+                tutorial.SetActive(true);
+            }
             if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.JoystickButton4))
             {
+                if(ispassed == false)
+                {
+                    AbilityTree.SetActive(true);
+
+                }
+
                 ActiveShield();
+                ispassed = true;
+                tutorial.SetActive(false);
+
             }
             if (isShieldActive == true)
             {
@@ -192,6 +259,8 @@ public class PlayerController : MonoBehaviour
        if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton1))
        {
          TakeLifePlayer();
+            ispassedcurar = true;
+            tutorialCurar.SetActive(false);
        }
 
        
@@ -201,46 +270,53 @@ public class PlayerController : MonoBehaviour
         }
 
         Potion();
-
-        if(OpenInventory.isActive == false)
+        Debug.Log(LifePlayer.isDeath);
+        if(!LifePlayer.isDeath)
         {
-            speed = 0;
+            if (OpenInventory.isActive == false)
+            {
+                speed = 0;
+            }
+
+            if (OpenBook.isBookEnabled == false)
+            {
+                speed = 0;
+            }
+
+            if (OpenStorageBook.isActive == false)
+            {
+                speed = 0;
+            }
+
+            if (ActiveSheet.isActive == true)
+            {
+                speed = 0;
+            }
+
+            if (ActiveShop.isShopEnabled == true)
+            {
+                speed = 0;
+            }
+
+            if (OpenAbilityTree.isEnabled == false)
+            {
+                speed = 0;
+            }
+
+            if (OpenMap.isActive == false)
+            {
+                speed = 0;
+            }
+
+            if (cameraFollowObject.isFocusing)
+            {
+                speed = 0;
+            }
+
+            
         }
 
-        if(OpenBook.isBookEnabled == false)
-        {
-            speed = 0;
-        }
-
-        if(OpenStorageBook.isActive == false)
-        {
-            speed = 0;
-        }
-
-        if (ActiveSheet.isActive == true)
-        {
-            speed = 0;
-        }
         
-        if(ActiveShop.isShopEnabled== true)
-        {
-            speed = 0;
-        }
-
-        if (OpenAbilityTree.isEnabled == false)
-        {
-            speed = 0;
-        }
-
-        if(OpenMap.isActive == false)
-        {
-            speed = 0;
-        }
-
-        if (CameraFollowObject.isActiveObject)
-        {
-            speed = 0;
-        }
     }
 
     public void Potion()

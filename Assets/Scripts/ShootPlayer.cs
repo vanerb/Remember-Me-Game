@@ -14,25 +14,28 @@ public class ShootPlayer : MonoBehaviour
 
 
     public int arrow;
+
+ 
     
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
 
         if (SkillTree.skillTree.skillLevels[1] >= SkillTree.skillTree.skillCaps[1])
         {
             
             if (Input.GetKeyDown(KeyCode.Mouse1) || Input.GetKeyDown(KeyCode.JoystickButton5))
             {
+                
+
                 if (arrow > 0)
                 {
                     if (nextFireTime < Time.time)
