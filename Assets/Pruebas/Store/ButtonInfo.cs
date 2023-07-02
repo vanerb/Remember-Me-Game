@@ -10,5 +10,6 @@ public class ButtonInfo : ScriptableObject
 
     public string title;
     public string description;
+    public string descriptionEn;
     public int baseCost;
 }

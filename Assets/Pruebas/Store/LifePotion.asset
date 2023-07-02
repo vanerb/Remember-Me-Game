@@ -15,4 +15,5 @@ MonoBehaviour:
   title: Keacan
   description: "Esta poci\xF3n aumentar\xE1 tu barra de verde y as\xED te podr\xE1s
     curar "
+  descriptionEn: This potion will increase your green bar so you can heal yourself.
   baseCost: 40

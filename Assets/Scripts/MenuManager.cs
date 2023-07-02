@@ -25,12 +25,13 @@ public class MenuManager : MonoBehaviour
 
         string configsonido = "VolumeAudio";
         float valor = PlayerPrefs.GetFloat("VolumeAudio");
-        
+        string configIdioma = "SelectedLanguage";
+        string idioma = PlayerPrefs.GetString("SelectedLanguage");
         PlayerPrefs.DeleteAll();
 
         // Configura el valor del PlayerPrefs que deseas mantener
         PlayerPrefs.SetFloat(configsonido, valor);
-
+        PlayerPrefs.SetString(configIdioma, idioma);
         // Guarda los cambios en PlayerPrefs
         PlayerPrefs.Save();
 

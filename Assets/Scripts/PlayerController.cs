@@ -270,7 +270,7 @@ public class PlayerController : MonoBehaviour
         }
 
         Potion();
-        Debug.Log(LifePlayer.isDeath);
+        ///Debug.Log(LifePlayer.isDeath);
         if(!LifePlayer.isDeath)
         {
             if (OpenInventory.isActive == false)

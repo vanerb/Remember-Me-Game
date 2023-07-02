@@ -6,6 +6,7 @@ public class ShopTemplate : MonoBehaviour
 {
     public Text title;
     public Text description;
+
     public Text baseCost;
     // Start is called before the first frame update
     void Start()

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Didoxain
   description: Te otorga el doble de fuerza pero solo con la espada
+  descriptionEn: Gives you twice the strength but only with the sword
   baseCost: 20

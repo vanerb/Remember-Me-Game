@@ -16,6 +16,6 @@ public class ShowPointsDeath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        txtPoints.text = "Puntos Totales: " + points.points;
+        txtPoints.text = "" + points.points;
     }
 }

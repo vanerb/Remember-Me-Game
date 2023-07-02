@@ -19,6 +19,28 @@ public class BookSheet : MonoBehaviour
         panelbook.SetActive(false);
     }
 
+
+	public void StartDialogueEnglish(DialogueEnglish dialogue)
+	{
+		//animator.SetBool("IsOpen", true);
+
+		panelbook.SetActive(true);
+
+		titletxt.text = dialogue.name;
+
+		sentences.Clear();
+
+
+
+		foreach (string sentence in dialogue.sentences)
+		{
+			sentences.Enqueue(sentence);
+		}
+
+		DisplayNextSentence();
+	}
+
+
 	public void StartDialogue(Dialogue dialogue)
 	{
 		//animator.SetBool("IsOpen", true);

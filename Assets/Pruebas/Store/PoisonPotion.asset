@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Agony Seed
   description: "Genera un area de veneno que hace da\xF1o a los enemigos."
+  descriptionEn: "Generates an area of \u200B\u200Bpoison that deals damage to enemies."
   baseCost: 30

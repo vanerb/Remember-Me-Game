@@ -47,6 +47,20 @@ public class EnemyBasicNavMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CameraFollowObject cameraFollowObject = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CameraFollowObject>();
+        if (cameraFollowObject.isFocusing)
+        {
+            navMeshAgent.speed = 0;
+            damage = 0;
+        }
+        else
+        {
+            navMeshAgent.speed = randomSpeed;
+            damage = 10;
+        }
+       
+
+
         if (PotionInvisibility.isInvisibilityActive)
         {
             rangeDetect = 0f;

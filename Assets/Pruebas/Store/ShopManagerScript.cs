@@ -43,9 +43,19 @@ public class ShopManagerScript : MonoBehaviour
         
         for (int i = 0; i < shopitemSO.Length; i++)
         {
-            shopPanels[i].title.text = shopitemSO[i].title;
-            shopPanels[i].description.text = shopitemSO[i].description;
-            shopPanels[i].baseCost.text = shopitemSO[i].baseCost.ToString();
+            if (PlayerPrefs.GetString("SelectedLanguage") == "Inglés")
+            {
+                shopPanels[i].title.text = shopitemSO[i].title;
+                shopPanels[i].description.text = shopitemSO[i].descriptionEn;
+                shopPanels[i].baseCost.text = shopitemSO[i].baseCost.ToString();
+            }
+            else
+            {
+                shopPanels[i].title.text = shopitemSO[i].title;
+                shopPanels[i].description.text = shopitemSO[i].description;
+                shopPanels[i].baseCost.text = shopitemSO[i].baseCost.ToString();
+            }
+                
         }
     }
 

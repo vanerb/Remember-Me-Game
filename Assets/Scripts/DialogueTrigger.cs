@@ -5,17 +5,38 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour {
 
 	public Dialogue dialogue;
+    public DialogueEnglish dialogueEnglish;
 	public void TriggerDialogue ()
 	{
-		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-	}
+        
+        if (PlayerPrefs.GetString("SelectedLanguage") == "Inglés")
+        {
+            FindObjectOfType<DialogueManager>().StartDialogueEnglish(dialogueEnglish);
+
+        }
+        else
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player"))
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            Cursor.lockState = CursorLockMode.None;
+            Debug.Log(PlayerPrefs.GetString("SelectedLanguage"));
+            if (PlayerPrefs.GetString("SelectedLanguage") == "Inglés")
+            {
+                FindObjectOfType<DialogueManager>().StartDialogueEnglish(dialogueEnglish);
+
+            }
+            else
+            {
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+            }
         }
     }
 
@@ -23,8 +44,16 @@ public class DialogueTrigger : MonoBehaviour {
     {
         if (collision.CompareTag("Player"))
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            FindObjectOfType<DialogueManager>().EndDialogue();
+            if (PlayerPrefs.GetString("SelectedLanguage") == "Inglés")
+            {
+                FindObjectOfType<DialogueManager>().EndDialogue();
+
+            }
+            else
+            {
+                FindObjectOfType<DialogueManager>().EndDialogue();
+
+            }
         }
     }
 

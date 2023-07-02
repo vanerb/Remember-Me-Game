@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 132463327}
   - component: {fileID: 132463330}
   - component: {fileID: 132463326}
+  - component: {fileID: 132463331}
   m_Layer: 5
   m_Name: Return
   m_TagString: Untagged
@@ -429,6 +430,21 @@ MonoBehaviour:
   imgNormal: {fileID: -1521692720083394003, guid: 67294afe08bd24543a7a0f056ff21195, type: 3}
   imgPressed: {fileID: 788490179828327817, guid: 67294afe08bd24543a7a0f056ff21195, type: 3}
   imgStatic: {fileID: 132463328}
+--- !u!114 &132463331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132463324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7fd26dbb3315446a3620f3f2eca90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textElement: {fileID: 1715631657}
+  textoEspanol: Volver
+  textoEnglish: Return
 --- !u!1 &136836324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1895,7 @@ GameObject:
   - component: {fileID: 1087584363}
   - component: {fileID: 1087584365}
   - component: {fileID: 1087584364}
+  - component: {fileID: 1087584366}
   m_Layer: 5
   m_Name: CreditsTxt
   m_TagString: Untagged
@@ -1949,6 +1966,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087584362}
   m_CullTransparentMesh: 1
+--- !u!114 &1087584366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087584362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7fd26dbb3315446a3620f3f2eca90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textElement: {fileID: 1087584364}
+  textoEspanol: "Creadora:  \nVanesa Ribera  \n\nHistoria: \nPaula Ribera  \n\nDise\xF1o
+    niveles: \nVanesa Ribera \n\nGUI: \nCrusenho  \n\nFX: \nnyk_nck   \n\nSonido/M\xFAsica:
+    \nleohpaz        \n\n\n\n\n\xA1Muchas gracias por jugar! \nS\xEDguenos en nuestras
+    redes sociales "
+  textoEnglish: "Creator: \nVanessa Ribera  \n\nHistory: \nPaula Ribera  \n\nDesign
+    levels: \nVanessa Ribera  \n\nGUI: \nCrusenho  \n\nFX: \nnyk_nck  \n\nSound/Music:
+    \nleohpaz      \n\n\n\n\nThank you very much for playing! \nFollow us on our
+    social networks"
 --- !u!1 &1095850083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2069,6 +2107,7 @@ GameObject:
   - component: {fileID: 1229055486}
   - component: {fileID: 1229055488}
   - component: {fileID: 1229055487}
+  - component: {fileID: 1229055489}
   m_Layer: 5
   m_Name: GraciasJugar
   m_TagString: Untagged
@@ -2137,6 +2176,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229055485}
   m_CullTransparentMesh: 1
+--- !u!114 &1229055489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229055485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7fd26dbb3315446a3620f3f2eca90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textElement: {fileID: 1229055487}
+  textoEspanol: "\xA1Gracias por jugar!"
+  textoEnglish: Thanks for playing!
 --- !u!1 &1266892473
 GameObject:
   m_ObjectHideFlags: 0

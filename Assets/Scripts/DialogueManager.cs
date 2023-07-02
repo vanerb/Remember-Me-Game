@@ -41,7 +41,29 @@ public class DialogueManager : MonoBehaviour {
 		DisplayNextSentence();
 	}
 
-    private void Update()
+
+
+	public void StartDialogueEnglish(DialogueEnglish dialogue)
+	{
+		//animator.SetBool("IsOpen", true);
+
+		panelDialogue.SetActive(true);
+
+		nameText.text = dialogue.name;
+
+		sentences.Clear();
+
+
+
+		foreach (string sentence in dialogue.sentences)
+		{
+			sentences.Enqueue(sentence);
+		}
+
+		DisplayNextSentence();
+	}
+
+	private void Update()
     {
 		dialogueCount = sentences.Count;
 		if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Joystick1Button3))

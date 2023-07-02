@@ -33,6 +33,8 @@ public class EnemyShootNavMeash : MonoBehaviour
 
 
     public NavMeshAgent navMeshAgent;
+
+    public float randomAttackRange;
     
 
 
@@ -45,6 +47,10 @@ public class EnemyShootNavMeash : MonoBehaviour
         randomWearpon = Random.Range(0, wearpon.Length);
         weraponWear.sprite = wearpon[randomWearpon];
         velocityEnemy = Random.Range(1, 6);
+        randomAttackRange = Random.Range(2, 3);
+
+        rangeAttack = randomAttackRange;
+
         navMeshAgent.speed = velocityEnemy;
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
@@ -56,6 +62,21 @@ public class EnemyShootNavMeash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        CameraFollowObject cameraFollowObject = GameObject.FindGameObjectWithTag("MainCamera").GetComponentInChildren<CameraFollowObject>();
+        if (cameraFollowObject.isFocusing)
+        {
+            navMeshAgent.speed = 0;
+            rangeAttack = 0;
+
+            
+        }
+        else
+        {
+            navMeshAgent.speed = velocityEnemy;
+            rangeAttack = randomAttackRange;
+        }
+
         if (PotionInvisibility.isInvisibilityActive)
         {
             range = 0f;
