@@ -29,6 +29,7 @@ public class CameraFollowObject : MonoBehaviour
     {
         if (isFocusing)
         {
+            Cursor.lockState = CursorLockMode.None;
             transform.position = Vector3.MoveTowards(transform.position, currentFocusPoint.position, moveSpeed * Time.deltaTime);
 
             if (transform.position == currentFocusPoint.position)
@@ -51,6 +52,21 @@ public class CameraFollowObject : MonoBehaviour
         transform.rotation = originalRotation;
         cameraObject.SetActive(false);
         isActiveObject = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void Close()
+    {
+        // Actualiza el último punto de enfoque
+        lastFocusPoint = currentFocusPoint;
+
+        isFocusing = false;
+        // Vuelve la cámara a la posición actual del jugador en lugar de la posición original de la cámara
+        transform.position = Camera.main.transform.position;
+        transform.rotation = originalRotation;
+        cameraObject.SetActive(false);
+        isActiveObject = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void FocusOn(int focusIndex)
